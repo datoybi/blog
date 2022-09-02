@@ -19,8 +19,8 @@ const defaultStyle = css`
 
   a,
   a:hover {
-    color: inherit;
-    text-decoration: none;
+    color: inherit !important;
+    text-decoration: none !important;
     cursor: pointer;
   }
 `;
