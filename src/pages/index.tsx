@@ -1,7 +1,4 @@
 import React, { FunctionComponent, useMemo } from 'react';
-import styled from '@emotion/styled';
-import GlobalStyle from 'components/Common/GlobalStyle';
-import Footer from 'components/Common/Footer';
 import Introduction from 'components/Main/Introduction';
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList';
 import PostList, { PostType } from 'components/Main/PostList';
@@ -34,12 +31,6 @@ type IndexPageProps = {
     };
   };
 };
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-`;
 
 const IndexPage: FunctionComponent<IndexPageProps> = function ({
   location: { search },
@@ -91,7 +82,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       url={siteUrl}
       image={publicURL}
     >
-      <Introduction profileImage={gatsbyImageData} />
+      {/* <Introduction profileImage={gatsbyImageData} /> */}
       <CategoryList
         selectedCategory={selectedCategory}
         categoryList={categoryList}

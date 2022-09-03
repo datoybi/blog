@@ -2,8 +2,8 @@ module.exports = {
   siteMetadata: {
     title: `주니어 개발자의 개발 블로그`,
     description: `의미있는 기록을 위한 개발 블로그 입니다.`,
-    author: `Datom`,
-    siteUrl: 'https://my-website-link.com', // 배포후에 변경하기
+    author: `Dasom Yun`,
+    siteUrl: 'https://datoybi.com',
   },
   plugins: [
     {
