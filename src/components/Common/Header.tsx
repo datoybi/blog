@@ -24,11 +24,9 @@ const Wrapper = styled.div`
   align-items: center;
 `;
 
-const LeftWrapper = styled.div``;
-
 const Logo = styled(Link)`
   color: #231900;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.5rem;
   font-family: 'Open Sans', sans-serif;
   text-align: center;
@@ -37,7 +35,7 @@ const Logo = styled(Link)`
 
 const GithubIcon = styled.a`
   color: #231900;
-  font-size: 1.5rem;
+  font-size: 2rem;
 `;
 
 const Header: FunctionComponent = function () {
@@ -45,11 +43,9 @@ const Header: FunctionComponent = function () {
     <HeaderWrapper>
       <Wrapper>
         <Logo to="/">Som.Blog</Logo>
-        <LeftWrapper>
-          <GithubIcon href="https://github.com/datoybi">
-            <FontAwesomeIcon icon={faGithub} />
-          </GithubIcon>
-        </LeftWrapper>
+        <GithubIcon href="https://github.com/datoybi">
+          <FontAwesomeIcon icon={faGithub} />
+        </GithubIcon>
       </Wrapper>
     </HeaderWrapper>
   );

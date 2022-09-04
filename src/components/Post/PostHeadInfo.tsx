@@ -15,8 +15,9 @@ const PostHeadInfoWrapper = styled.div`
   width: 768px;
   height: 100%;
   margin: 0 auto;
-  padding: 60px 0;
-  color: #ffffff;
+  color: #000000;
+  margin-top: 150px;
+  align-items: flex-start;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -55,18 +56,23 @@ const Title = styled.div`
   font-size: 45px;
   font-weight: 800;
 
+  background-image: linear-gradient(transparent 60%, #f8cd07 40%);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
   @media (max-width: 768px) {
     font-size: 30px;
   }
 `;
 
-const PostData = styled.div`
+const DateWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 10px;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 500;
+  margin-bottom: 1em;
+  color: rgba(0, 0, 0, 0.7);
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -84,14 +90,14 @@ const PostHeadInfo: FunctionComponent<PostHeadInfoProps> = function ({
 
   return (
     <PostHeadInfoWrapper>
-      <PrevPageIcon onClick={goBackPage}>
-        <FontAwesomeIcon icon={faArrowLeft} />
-      </PrevPageIcon>
+      {/* <PrevPageIcon onClick={goBackPage}> */}
+      {/* <FontAwesomeIcon icon={faArrowLeft} /> */}
+      {/* </PrevPageIcon> */}
+      <DateWrapper>
+        {/* <div>{categories.join(' / ')}</div> */}
+        {date}
+      </DateWrapper>
       <Title>{title}</Title>
-      <PostData>
-        <div>{categories.join(' / ')}</div>
-        <div>{date}</div>
-      </PostData>
     </PostHeadInfoWrapper>
   );
 };

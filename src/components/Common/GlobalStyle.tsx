@@ -16,6 +16,10 @@ const defaultStyle = css`
       url('/fonts/Pretendard-Regular.woff') format('woff');
   }
 
+  ::selection {
+    background-color: rgba(255, 235, 60, 0.3);
+  }
+
   html,
   body,
   div,
@@ -128,14 +132,8 @@ const defaultStyle = css`
     font-size: 16px;
     word-break: keep-all;
     letter-spacing: -0.3px;
-    color: #222;
-    padding-bottom: 2rem;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
-  }
-  ol,
-  ul {
-    list-style: none;
   }
   blockquote,
   q {

@@ -71,7 +71,6 @@ const CategoryItem = styled.div`
 const Summary = styled.div`
   display: -webkit-box;
   overflow: hidden;
-  // margin-top: auto;
   text-overflow: ellipsis;
   white-space: normal;
   overflow-wrap: break-word;

@@ -6,17 +6,17 @@ interface PostContentProps {
 }
 
 const MarkdownRenderer = styled.div`
-  // Renderer Style
   display: flex;
   flex-direction: column;
   width: 768px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 50px 0;
   word-break: break-all;
+  color: #222;
 
   // Markdown Style
   line-height: 1.8;
-  font-size: 16px;
+  font-size: 1.1rem;
   font-weight: 400;
 
   // Apply Padding Attribute to All Elements
@@ -29,13 +29,13 @@ const MarkdownRenderer = styled.div`
   h2,
   h3 {
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 5x;
   }
 
   * + h1,
   * + h2,
   * + h3 {
-    margin-top: 80px;
+    margin-top: 25px;
   }
 
   hr + h1,
@@ -73,14 +73,22 @@ const MarkdownRenderer = styled.div`
 
   // Adjust Horizontal Rule style
   hr {
-    border: 1px solid #000000;
-    margin: 100px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-bottom: 0;
+    margin: 50px 0;
   }
 
   // Adjust Link Element Style
   a {
-    color: #4263eb;
-    text-decoration: underline;
+    background-color: rgba(0, 0, 0, 0.07);
+    color: #222;
+    font-weight: 100;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   // Adjust Code Style
@@ -100,10 +108,30 @@ const MarkdownRenderer = styled.div`
     tab-size: 2;
   }
 
-  // Markdown Responsive Design
+  p code[class='language-text'],
+  h1 code[class='language-text'],
+  h2 code[class='language-text'],
+  h3 code[class='language-text'] {
+    // highlight
+    background-color: #ffffff;
+    color: #231900;
+    font-weight: 400;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+      'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol', sans-serif;
+    background-image: linear-gradient(transparent 60%, #f8cd07 40%);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: 0.5s linear highlight-animation;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+  }
+
+  // !: Markdown Responsive Design
   @media (max-width: 768px) {
     width: 100%;
-    padding: 80px 20px;
+    padding: 50px 20px;
     line-height: 1.6;
     font-size: 14px;
 
@@ -125,6 +153,7 @@ const MarkdownRenderer = styled.div`
 
     hr {
       margin: 50px 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.3);
     }
   }
 `;

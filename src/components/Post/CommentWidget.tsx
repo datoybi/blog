@@ -5,6 +5,8 @@ const src = 'https://utteranc.es/client.js';
 const repo = 'datoybi/blog';
 
 const UtterancesWrapper = styled.div`
+  margin: 50px 0 100px 0;
+
   @media (max-width: 768px) {
     padding: 0 20px;
   }
