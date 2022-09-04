@@ -8,9 +8,8 @@ type PostItemProps = PostFrontmatterType & { link: string };
 
 const PostItemWrapper = styled(Link)`
   display: flex;
-  flex-direction: column;
-  border-radius: 10px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  margin-bottom: 20px;
+  flex-direction: row;
   transition: 0.3s box-shadow;
   cursor: pointer;
 
@@ -20,9 +19,8 @@ const PostItemWrapper = styled(Link)`
 `;
 
 const ThumbnailImage = styled(GatsbyImage)`
-  width: 100%;
+  width: 35%;
   height: 200px;
-  border-radius: 10px 10px 0 0;
 `;
 
 const PostItemContent = styled.div`
@@ -30,23 +28,24 @@ const PostItemContent = styled.div`
   display: flex;
   flex-direction: column;
   padding: 15px;
+  color: #231900;
 `;
 
 const Title = styled.div`
   display: -webkit-box;
   overflow: hidden;
-  margin-bottom: 3px;
+  margin-bottom: 0.5em;
   text-overflow: ellipsis;
   while-space: normal;
   overflow-wrap: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 20px;
+  font-size: 1.5em;
   font-weight: 700;
 `;
 
 const Date = styled.div`
-  font-size: 14px;
+  font-size: 1em;
   font-weight: 400;
   opacity: 0.7;
 `;
@@ -55,11 +54,12 @@ const Category = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: 10px;
-  margin: 10px -5px;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 `;
 
 const CategoryItem = styled.div`
-  margin: 2.5px 5px;
+  margin-right: 5px;
   padding: 3px 5px;
   border-radius: 3px;
   background: black;
@@ -71,14 +71,16 @@ const CategoryItem = styled.div`
 const Summary = styled.div`
   display: -webkit-box;
   overflow: hidden;
-  margin-top: auto;
+  // margin-top: auto;
   text-overflow: ellipsis;
   white-space: normal;
   overflow-wrap: break-word;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
-  font-size: 16px;
+  font-size: 1em;
   opacity: 0.8;
+  margin-top: 1.5em;
+  line-height: 1.4em;
 `;
 
 const PostItem: FunctionComponent<PostItemProps> = function ({
@@ -97,11 +99,11 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
       <PostItemContent>
         <Title>{title}</Title>
         <Date>{date}</Date>
-        <Category>
+        {/* <Category>
           {categories.map(category => (
             <CategoryItem key={category}>{category}</CategoryItem>
           ))}
-        </Category>
+        </Category> */}
         <Summary>{summary}</Summary>
       </PostItemContent>
     </PostItemWrapper>

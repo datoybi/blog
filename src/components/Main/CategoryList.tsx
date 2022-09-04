@@ -25,11 +25,31 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   margin-right: 20px;
   padding: 5px 0;
   font-size: 18px;
-  font-weight: ${({ active }) => (active ? '800' : '400')};
   cursor: pointer;
+  color: #231900;
+  font-family: Inter, Helvetica, sans-serif;
+  background-image: linear-gradient(
+    transparent calc(100% - 1.8px),
+    black 1.8px
+  );
+  background-repeat: no-repeat;
+  -webkit-background-size: 0% 100%;
+  background-size: 0% 100%;
+  font-weight: 500;
+  font-size: 1.2rem;
+  -webkit-letter-spacing: -0.04em;
+  -moz-letter-spacing: -0.04em;
+  -ms-letter-spacing: -0.04em;
+  letter-spacing: -0.04em;
+  max-width: 53.75rem;
+  -webkit-transition: background-size 1s;
+  -webkit-transition: background-size 1s;
+  transition: background-size 0.5s;
 
-  &:last-of-type {
-    margin-right: 0;
+  background-size: ${({ active }) => (active ? '100% 100%' : '0% 100%')};
+
+  &:hover {
+    background-size: 100% 100%;
   }
 
   @media (max-width: 768px) {
@@ -40,6 +60,7 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
 const CategoryListWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   width: 768px;
   margin: 100px auto 0;
 
@@ -62,7 +83,7 @@ const CategoryList: FunctionComponent<CategoryListProps> = function ({
           active={name === selectedCategory}
           key={name}
         >
-          #{name}({count})
+          {name}({count})
         </CategoryItem>
       ))}
     </CategoryListWrapper>

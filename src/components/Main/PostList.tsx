@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useMemo } from 'react';
+import React, { FunctionComponent } from 'react';
 import styled from '@emotion/styled';
 import PostItem from 'components/Main/PostItem';
 import { IGatsbyImageData } from 'gatsby-plugin-image';
@@ -30,13 +30,11 @@ type PostListProps = {
 };
 
 const PostListWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
+  display: flex;
   width: 768px;
   margin: 0 auto;
   padding: 50px 0 100px;
-
+  flex-direction: column;
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     width: 100%;
@@ -52,7 +50,7 @@ const PostList: FunctionComponent<PostListProps> = function ({
     selectedCategory,
     posts,
   );
-
+		
   return (
     <PostListWrapper ref={containerRef}>
       {postList.map(

@@ -15,7 +15,6 @@ const HeaderWrapper = styled.header`
 `;
 
 const Wrapper = styled.div`
-  // border: 1px solid tomato;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,7 +35,7 @@ const Logo = styled(Link)`
   letter-spacing: -2px;
 `;
 
-const GithubIcon = styled(Link)`
+const GithubIcon = styled.a`
   color: #231900;
   font-size: 1.5rem;
 `;
@@ -47,7 +46,7 @@ const Header: FunctionComponent = function () {
       <Wrapper>
         <Logo to="/">Som.Blog</Logo>
         <LeftWrapper>
-          <GithubIcon to="https://github.com/datoybi">
+          <GithubIcon href="https://github.com/datoybi">
             <FontAwesomeIcon icon={faGithub} />
           </GithubIcon>
         </LeftWrapper>
