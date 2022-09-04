@@ -2,11 +2,20 @@ import React, { FunctionComponent } from 'react';
 import { Global, css } from '@emotion/react';
 
 const defaultStyle = css`
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+  @font-face {
+    font-family: 'Lato';
+    src: url('/fonts/Lato-Heavy.woff2') format('woff2');
+    font-weight: 700;
+  }
+
   @font-face {
     font-family: 'Pretendard';
     src: url('/fonts/Pretendard-Regular.woff2') format('woff2'),
       url('/fonts/Pretendard-Regular.woff') format('woff');
   }
+
   html,
   body,
   div,
@@ -111,11 +120,18 @@ const defaultStyle = css`
   }
   body {
     line-height: 1;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
       Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
       'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
       'Segoe UI Symbol', sans-serif;
-    color: #1d1d1f;
+    color: #231900;
+    font-size: 16px;
+    word-break: keep-all;
+    letter-spacing: -0.3px;
+    color: #222;
+    padding-bottom: 2rem;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
   }
   ol,
   ul {
