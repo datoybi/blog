@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useMemo } from 'react';
-import Introduction from 'components/Main/Introduction';
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList';
 import PostList, { PostType } from 'components/Main/PostList';
 import { graphql } from 'gatsby';
