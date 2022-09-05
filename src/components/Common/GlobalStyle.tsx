@@ -16,6 +16,12 @@ const defaultStyle = css`
       url('/fonts/Pretendard-Regular.woff') format('woff');
   }
 
+  @font-face {
+    font-family: 'Pretendard-bold';
+    src: url('/fonts/Pretendard-Bold.woff2') format('woff2'),
+      url('/fonts/Pretendard-Bold.woff') format('woff');
+  }
+
   ::selection {
     background-color: rgba(255, 235, 60, 0.3);
   }

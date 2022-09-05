@@ -45,6 +45,8 @@ const PostItemContent = styled.div`
 
 const Title = styled.div`
   display: -webkit-box;
+  font-family: 'Pretendard-bold';
+  font-size: 2em;
   overflow: hidden;
   margin-bottom: 0.5em;
   text-overflow: ellipsis;
@@ -52,8 +54,11 @@ const Title = styled.div`
   overflow-wrap: break-word;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
-  font-size: 1.5em;
-  font-weight: 700;
+  font-weight: border;
+
+  @media (max-width: 768px) {
+    font-size: 1.8em;
+  }
 `;
 
 const Date = styled.div`
