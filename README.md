@@ -2,13 +2,15 @@
 
 <br/>
 <p align="center">
-	<img src="./static/logo.png"><br/>
+	<a href="http://www.datoybi.com/"><img src="./static/logo.png"></a><br/>
 </p>
 
 ## 🌍 Tools
 
-- Bulit using Gatsby.js 🎉
-- Styled using: Emotion 🎨
-- Deployed on netlify 🚀
-- Comment using utterances 🗒️
-- Code syntax using Prism.js 🕶️
+- Bulit using <b>Gatsby.js</b> 🎉
+- Styled using: <b>Emotion</b> 🎨
+- Deployed on <b>netlify</b> 🚀
+- Comment using <b>utterances</b> 🗒️
+- Code syntax using <b>Prism.js</b> 🕶️
+
+<a href="http://www.datoybi.com/">블로그 구경가기</a>
