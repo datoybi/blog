@@ -18,7 +18,7 @@ const PostItemWrapper = styled(Link)`
   }
 
   @media (max-width: 768px) {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: 0 10px 20px 10px;
   }
 `;
@@ -92,6 +92,10 @@ const Summary = styled.div`
   opacity: 0.8;
   margin-top: 1.5em;
   line-height: 1.4em;
+
+  @media (max-width: 768px) {
+    margin-top: 0.5em;
+  }
 `;
 
 const PostItem: FunctionComponent<PostItemProps> = function ({

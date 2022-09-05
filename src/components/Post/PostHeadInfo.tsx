@@ -51,11 +51,11 @@ const DateWrapper = styled.div`
 const CategoryWrapper = styled.div`
   display: flex;
   margin-top: 1.5em;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #222;
 
   @media (max-width: 768px) {
     margin-top: 1.5em;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #222;
   }
 `;
 
