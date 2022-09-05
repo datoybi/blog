@@ -30,6 +30,9 @@ const Template: FunctionComponent<TemplateProps> = function ({
     <Container>
       <Helmet>
         <title>{title}</title>
+        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="icon" href="favicon.ico" />
+
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -47,6 +50,10 @@ const Template: FunctionComponent<TemplateProps> = function ({
         <meta name="twitter:image" content={image} />
         <meta name="twitter:site" content="@사용자이름" />
         <meta name="twitter:creator" content="@사용자이름" />
+        <meta
+          name="google-site-verification"
+          content="8wMh0oHP4HDCj9kTzH21m7q5p0GlS6vGvc1DVLoKkJE"
+        />
         <html lang="ko" />
       </Helmet>
 
