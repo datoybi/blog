@@ -22,9 +22,10 @@ const PostHeadInfoWrapper = styled.div`
 
 const Title = styled.span`
   white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-all;
   font-size: 45px;
   font-weight: 800;
-  word-break: keep-all;
   line-height: 1.2;
   background-image: linear-gradient(transparent 60%, #f8cd07 40%);
   background-repeat: no-repeat;
