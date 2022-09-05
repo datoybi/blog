@@ -22,6 +22,16 @@ const Wrapper = styled.div`
   height: 60px;
   margin: 0 auto;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 60px;
+    margin: 0 auto;
+    align-items: center;
+  }
 `;
 
 const Logo = styled(Link)`
@@ -31,11 +41,21 @@ const Logo = styled(Link)`
   font-family: 'Open Sans', sans-serif;
   text-align: center;
   letter-spacing: -2px;
+
+  @media (max-width: 768px) {
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
 `;
 
 const GithubIcon = styled.a`
   color: #231900;
   font-size: 2rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
+    margin-right: 20px;
+  }
 `;
 
 const Header: FunctionComponent = function () {

@@ -130,21 +130,21 @@ const MarkdownRenderer = styled.div`
 
   // !: Markdown Responsive Design
   @media (max-width: 768px) {
-    width: 100%;
+    width: calc(100% - 40px);
     padding: 50px 20px;
     line-height: 1.6;
-    font-size: 14px;
+    font-size: 16px;
 
     h1 {
-      font-size: 23px;
+      font-size: 25px;
     }
 
     h2 {
-      font-size: 20px;
+      font-size: 22px;
     }
 
     h3 {
-      font-size: 17px;
+      font-size: 19px;
     }
 
     img {

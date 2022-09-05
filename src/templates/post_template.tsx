@@ -28,7 +28,7 @@ const PostTemplate: FunctionComponent<PostTemplateProps> = function ({
       html,
       frontmatter: {
         title,
-        summary, // 나중에 사용할 예정입니다!
+        summary,
         date,
         categories,
         thumbnail: {

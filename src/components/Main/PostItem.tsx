@@ -16,17 +16,28 @@ const PostItemWrapper = styled(Link)`
   &:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
+
+  @media (max-width: 768px) {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 0 10px 20px 10px;
+  }
 `;
 
 const ThumbnailImage = styled(GatsbyImage)`
   width: 35%;
   height: 200px;
+
+  @media (max-width: 768px) {
+    width: 0%;
+  }
 `;
 
 const PostItemContent = styled.div`
   flex: 1;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  overflow-wrap: break-word;
   padding: 15px;
   color: #231900;
 `;
@@ -71,9 +82,9 @@ const CategoryItem = styled.div`
 const Summary = styled.div`
   display: -webkit-box;
   overflow: hidden;
+  overflow-wrap: break-word;
   text-overflow: ellipsis;
   white-space: normal;
-  overflow-wrap: break-word;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   font-size: 1em;
@@ -85,7 +96,6 @@ const Summary = styled.div`
 const PostItem: FunctionComponent<PostItemProps> = function ({
   title,
   date,
-  categories,
   summary,
   thumbnail: {
     childImageSharp: { gatsbyImageData },
@@ -98,11 +108,6 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
       <PostItemContent>
         <Title>{title}</Title>
         <Date>{date}</Date>
-        {/* <Category>
-          {categories.map(category => (
-            <CategoryItem key={category}>{category}</CategoryItem>
-          ))}
-        </Category> */}
         <Summary>{summary}</Summary>
       </PostItemContent>
     </PostItemWrapper>

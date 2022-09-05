@@ -27,7 +27,6 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   font-size: 18px;
   cursor: pointer;
   color: #231900;
-  font-family: Inter, Helvetica, sans-serif;
   background-image: linear-gradient(
     transparent calc(100% - 1.8px),
     black 1.8px
@@ -37,15 +36,9 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   background-size: 0% 100%;
   font-weight: 500;
   font-size: 1.2rem;
-  -webkit-letter-spacing: -0.04em;
-  -moz-letter-spacing: -0.04em;
-  -ms-letter-spacing: -0.04em;
   letter-spacing: -0.04em;
   max-width: 53.75rem;
-  -webkit-transition: background-size 1s;
-  -webkit-transition: background-size 1s;
   transition: background-size 0.5s;
-
   background-size: ${({ active }) => (active ? '100% 100%' : '0% 100%')};
 
   &:hover {
@@ -54,6 +47,9 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
 
   @media (max-width: 768px) {
     font-size: 15px;
+    background-size: '0% 100%';
+    margin: 0 10px 10px 0;
+    transition: none;
   }
 `;
 
@@ -66,8 +62,7 @@ const CategoryListWrapper = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    margin-top: 50px;
-    padding: 0 20px;
+    margin-top: 100px;
   }
 `;
 
