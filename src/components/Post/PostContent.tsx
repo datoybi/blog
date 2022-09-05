@@ -136,7 +136,7 @@ const MarkdownRenderer = styled.div`
     font-size: 16px;
 
     h1 {
-      font-size: 25px;
+      font-size: 27px;
     }
 
     h2 {

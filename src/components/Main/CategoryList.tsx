@@ -48,8 +48,12 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   @media (max-width: 768px) {
     font-size: 15px;
     background-size: '0% 100%';
-    margin: 0 10px 10px 0;
+    margin-right: 10px;
     transition: none;
+
+    &:nth-last-of-type(1) {
+      margin-right: 0;
+    }
   }
 `;
 

@@ -28,7 +28,8 @@ const ThumbnailImage = styled(GatsbyImage)`
   height: 200px;
 
   @media (max-width: 768px) {
-    width: 0%;
+    width: 0;
+    height: 0;
   }
 `;
 

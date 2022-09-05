@@ -42,6 +42,7 @@ const DateWrapper = styled.div`
   color: rgba(0, 0, 0, 0.7);
 
   @media (max-width: 768px) {
+    margin-bottom: 0.5em;
     font-size: 15px;
   }
 `;
@@ -49,6 +50,12 @@ const DateWrapper = styled.div`
 const CategoryWrapper = styled.div`
   display: flex;
   margin-top: 1.5em;
+
+  @media (max-width: 768px) {
+    margin-top: 0.7em;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #222;
+  }
 `;
 
 const Category = styled.p`
