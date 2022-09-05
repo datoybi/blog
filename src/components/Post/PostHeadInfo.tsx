@@ -24,14 +24,15 @@ const Title = styled.span`
   white-space: normal;
   font-size: 45px;
   font-weight: 800;
-  word-break: break-word;
+  word-break: keep-all;
   line-height: 1.2;
   background-image: linear-gradient(transparent 60%, #f8cd07 40%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
   @media (max-width: 768px) {
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: bolder;
   }
 `;
 
@@ -42,7 +43,7 @@ const DateWrapper = styled.div`
   color: rgba(0, 0, 0, 0.7);
 
   @media (max-width: 768px) {
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
     font-size: 15px;
   }
 `;
@@ -52,7 +53,7 @@ const CategoryWrapper = styled.div`
   margin-top: 1.5em;
 
   @media (max-width: 768px) {
-    margin-top: 0.7em;
+    margin-top: 1.5em;
     padding-bottom: 20px;
     border-bottom: 1px solid #222;
   }
