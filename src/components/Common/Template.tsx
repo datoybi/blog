@@ -16,7 +16,7 @@ type TemplateProps = {
 const Container = styled.main`
   display: flex;
   flex-direction: column;
-  height: 100%;
+  height: 100vh;
 `;
 
 const Template: FunctionComponent<TemplateProps> = function ({
