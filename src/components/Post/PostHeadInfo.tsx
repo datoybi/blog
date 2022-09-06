@@ -21,11 +21,11 @@ const PostHeadInfoWrapper = styled.div`
 `;
 
 const Title = styled.span`
+  font-family: 'Pretendard-bold';
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-all;
   font-size: 45px;
-  font-weight: 800;
   line-height: 1.2;
   background-image: linear-gradient(transparent 60%, #f8cd07 40%);
   background-repeat: no-repeat;
@@ -33,7 +33,6 @@ const Title = styled.span`
 
   @media (max-width: 768px) {
     font-size: 40px;
-    font-weight: bolder;
   }
 `;
 

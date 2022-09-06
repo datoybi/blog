@@ -68,7 +68,7 @@ const MarkdownRenderer = styled.div`
   ol,
   ul {
     margin-left: 20px;
-    padding: 30px 0;
+    padding: 10px 0;
   }
 
   // Adjust Horizontal Rule style
@@ -133,18 +133,18 @@ const MarkdownRenderer = styled.div`
     width: calc(100% - 40px);
     padding: 50px 20px;
     line-height: 1.6;
-    font-size: 16px;
+    font-size: 1.1em;
 
     h1 {
-      font-size: 27px;
+      font-size: 28px;
     }
 
     h2 {
-      font-size: 22px;
+      font-size: 23px;
     }
 
     h3 {
-      font-size: 19px;
+      font-size: 20px;
     }
 
     img {
