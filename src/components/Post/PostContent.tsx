@@ -111,6 +111,7 @@ const MarkdownRenderer = styled.div`
   p code[class='language-text'],
   h1 code[class='language-text'],
   h2 code[class='language-text'],
+  li code[class='language-text'],
   h3 code[class='language-text'] {
     // highlight
     background-color: #ffffff;
@@ -126,6 +127,29 @@ const MarkdownRenderer = styled.div`
     animation: 0.5s linear highlight-animation;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+  }
+
+  table {
+    border: 1px solid #abb8c3;
+    margin: 25px 0;
+  }
+
+  th {
+    border: 1px solid #abb8c3;
+  }
+
+  td {
+    border: 1px solid #abb8c3;
+    padding-left: 1rem;
+  }
+
+  p > .gatsby-resp-image-wrapper {
+    margin: 20px 0;
+  }
+
+  img {
+    margin: 20px 0;
+    width: 100%;
   }
 
   // !: Markdown Responsive Design
@@ -145,10 +169,6 @@ const MarkdownRenderer = styled.div`
 
     h3 {
       font-size: 20px;
-    }
-
-    img {
-      width: 100%;
     }
 
     hr {

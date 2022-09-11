@@ -5,21 +5,20 @@ const defaultStyle = css`
   @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
   @font-face {
-    font-family: 'Lato';
-    src: url('/fonts/Lato-Heavy.woff2') format('woff2');
-    font-weight: 700;
+    font-family: 'Pretendard';
+    src: local('Pretendard');
+    src: url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
+    src: url('/fonts/Pretendard-Regular.subset.woff') format('woff');
+    font-display: swap;
   }
 
   @font-face {
     font-family: 'Pretendard';
-    src: url('/fonts/Pretendard-Regular.woff2') format('woff2'),
-      url('/fonts/Pretendard-Regular.woff') format('woff');
-  }
-
-  @font-face {
-    font-family: 'Pretendard-bold';
-    src: url('/fonts/Pretendard-Bold.woff2') format('woff2'),
-      url('/fonts/Pretendard-Bold.woff') format('woff');
+    src: local('Pretendard');
+    src: url('/fonts/Pretendard-Bold.subset.woff2') format('woff2');
+    src: url('/fonts/Pretendard-Bold.subset.woff') format('woff');
+    font-weight: bold;
+    font-display: swap;
   }
 
   ::selection {
@@ -60,7 +59,6 @@ const defaultStyle = css`
   samp,
   small,
   strike,
-  strong,
   sub,
   sup,
   tt,

@@ -3,7 +3,7 @@ date: '2022-09-05'
 title: 'Gatsby로 블로그 만든 후기'
 categories: ['회고']
 summary: '블로그를 만든 이유와 목적, 만들면서 느낀점과 알게된 것들을 공유합니다.'
-thumbnail: './images/just-do-it.jpg'
+thumbnail: './thumbnail/just-do-it.jpg'
 ---
 
 ## 블로그를 만든 이유?

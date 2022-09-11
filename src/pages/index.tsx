@@ -74,6 +74,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
       ),
     [],
   );
+
   return (
     <Template
       title={title}

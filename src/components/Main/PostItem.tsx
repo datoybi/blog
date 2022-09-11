@@ -45,7 +45,7 @@ const PostItemContent = styled.div`
 
 const Title = styled.div`
   display: -webkit-box;
-  font-family: 'Pretendard-bold';
+  font-weight: bold;
   font-size: 2em;
   overflow: hidden;
   margin-bottom: 0.5em;
@@ -55,6 +55,7 @@ const Title = styled.div`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   font-weight: border;
+  padding-bottom: 0.1rem;
 
   @media (max-width: 768px) {
     font-size: 1.8em;

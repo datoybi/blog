@@ -21,7 +21,8 @@ const PostHeadInfoWrapper = styled.div`
 `;
 
 const Title = styled.span`
-  font-family: 'Pretendard-bold';
+  font-family: 'Pretendard';
+  font-weight: bold;
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-all;
