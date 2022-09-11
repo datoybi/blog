@@ -152,7 +152,7 @@ CSS의 font-display 속성을 이용하면 웹 폰트의 로딩 상태에 따른
 
 fallback 폰트는 각 OS 별로 어떤 폰트를 기본으로 내장하고 있는지를 확인한 뒤, 설정합니다.
 
-참고 : [https://granneman.com/webdev/coding/css/fonts-and-formatting/default-fonts](./images/font-matcher.png)
+참고 : [https://granneman.com/webdev/coding/css/fonts-and-formatting/default-fonts](https://granneman.com/webdev/coding/css/fonts-and-formatting/default-fonts)
 
 Font style matcher에서 fallback 폰트와 사용할 웹 폰트를 설정하면 두 가지 폰트가 같은 위치에 겹쳐서 표시됩니다. 이것을 이용하여 적용 전 후 상태를 체크할 수 있습니다.
 

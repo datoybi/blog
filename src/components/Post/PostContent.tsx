@@ -116,17 +116,16 @@ const MarkdownRenderer = styled.div`
     // highlight
     background-color: #ffffff;
     color: #231900;
-    font-weight: 400;
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
-      Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
-      'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol', sans-serif;
     background-image: linear-gradient(transparent 60%, #f8cd07 40%);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     animation: 0.5s linear highlight-animation;
     animation-iteration-count: 1;
     animation-fill-mode: both;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
+      Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+      'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+      'Segoe UI Symbol', sans-serif;
   }
 
   table {

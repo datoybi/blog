@@ -2,23 +2,27 @@ import React, { FunctionComponent } from 'react';
 import { Global, css } from '@emotion/react';
 
 const defaultStyle = css`
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
 
   @font-face {
-    font-family: 'Pretendard';
-    src: local('Pretendard');
-    src: url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
-    src: url('/fonts/Pretendard-Regular.subset.woff') format('woff');
-    font-display: swap;
+    font-family: Lato;
+    src: local('Lato');
+    src: url('/fonts/Lato-Black.woff2') format('woff2');
+    src: url('/fonts/Lato-Black.woff') format('woff');
   }
 
   @font-face {
-    font-family: 'Pretendard';
+    font-family: Pretendard;
+    src: local('Pretendard');
+    src: url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
+    src: url('/fonts/Pretendard-Regular.subset.woff') format('woff');
+  }
+
+  @font-face {
+    font-family: Pretendard;
     src: local('Pretendard');
     src: url('/fonts/Pretendard-Bold.subset.woff2') format('woff2');
     src: url('/fonts/Pretendard-Bold.subset.woff') format('woff');
     font-weight: bold;
-    font-display: swap;
   }
 
   ::selection {
@@ -128,7 +132,7 @@ const defaultStyle = css`
   }
   body {
     line-height: 1;
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
       Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
       'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
       'Segoe UI Symbol', sans-serif;
