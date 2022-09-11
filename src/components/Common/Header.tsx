@@ -38,7 +38,7 @@ const Logo = styled(Link)`
   color: #231900;
   font-size: 2rem;
   line-height: 1.5rem;
-  font-family: Lato, sans-serif;
+  font-family: 'Lato', sans-serif;
   text-align: center;
   letter-spacing: -2px;
 

@@ -105,7 +105,10 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
-    `gatsby-plugin-preload-fonts`,
     `gatsby-plugin-subfont`,
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {},
+    },
   ],
 };

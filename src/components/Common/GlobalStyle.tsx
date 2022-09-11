@@ -2,27 +2,31 @@ import React, { FunctionComponent } from 'react';
 import { Global, css } from '@emotion/react';
 
 const defaultStyle = css`
-
   @font-face {
-    font-family: Lato;
+    font-family: 'Lato';
     src: local('Lato');
     src: url('/fonts/Lato-Black.woff2') format('woff2');
     src: url('/fonts/Lato-Black.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
   }
 
   @font-face {
-    font-family: Pretendard;
+    font-family: 'Pretendard';
     src: local('Pretendard');
     src: url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
     src: url('/fonts/Pretendard-Regular.subset.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
   }
 
   @font-face {
-    font-family: Pretendard;
+    font-family: 'Pretendard';
     src: local('Pretendard');
     src: url('/fonts/Pretendard-Bold.subset.woff2') format('woff2');
     src: url('/fonts/Pretendard-Bold.subset.woff') format('woff');
     font-weight: bold;
+    font-display: swap;
   }
 
   ::selection {
@@ -132,8 +136,8 @@ const defaultStyle = css`
   }
   body {
     line-height: 1;
-    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui,
-      Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont,
+      system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
       'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
       'Segoe UI Symbol', sans-serif;
     color: #231900;
