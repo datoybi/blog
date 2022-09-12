@@ -172,6 +172,7 @@ const defaultStyle = css`
 
   .lato header a[class*='Logo'] {
     font-family: 'Lato', arial;
+    font-size: 2rem;
     letter-spacing: -2px;
   }
 
@@ -185,6 +186,7 @@ const defaultStyle = css`
   .pretendard main div[class*='Title'] {
     letter-spacing: -0.3px;
     font-weight: bold;
+    font-size: 2em;
     font-family: 'Pretendard', sans-serif;
   }
 
