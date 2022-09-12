@@ -5,6 +5,7 @@ const defaultStyle = css`
   @font-face {
     font-family: 'Lato';
     src: local('Lato');
+    src: url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=block');
     src: url('/fonts/Lato-Black.woff2') format('woff2');
     src: url('/fonts/Lato-Black.woff') format('woff');
     font-weight: normal;
