@@ -106,9 +106,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-subfont`,
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {},
-    },
   ],
 };

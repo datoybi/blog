@@ -35,8 +35,9 @@ const defaultStyle = css`
 
   html,
   body,
-  div,
   span,
+  main,
+  div,
   applet,
   object,
   iframe,
@@ -101,7 +102,6 @@ const defaultStyle = css`
   figure,
   figcaption,
   footer,
-  header,
   hgroup,
   menu,
   nav,
@@ -127,7 +127,6 @@ const defaultStyle = css`
   figcaption,
   figure,
   footer,
-  header,
   hgroup,
   menu,
   nav,
@@ -136,14 +135,11 @@ const defaultStyle = css`
   }
   body {
     line-height: 1;
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont,
-      system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
-      'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
-      'Segoe UI Symbol', sans-serif;
+    font-family: sans-serif, arial;
     color: #231900;
     font-size: 16px;
     word-break: keep-all;
-    letter-spacing: -0.3px;
+    /* letter-spacing: -0.3px; */
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
@@ -162,9 +158,38 @@ const defaultStyle = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
-  div,
+
   a {
     text-decoration: none;
+  }
+
+  header a[class*='Logo'] {
+    font-family: Roboto, arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -3.95px;
+  }
+
+  .lato header a[class*='Logo'] {
+    font-family: 'Lato', arial;
+    letter-spacing: -2px;
+  }
+
+  main div[class*='Title'] {
+    font-family: sans-serif, arial;
+    letter-spacing: -2.5px;
+    font-size: 2em;
+    font-weight: 900;
+  }
+
+  .pretendard main div[class*='Title'] {
+    letter-spacing: -0.3px;
+    font-weight: bold;
+    font-family: 'Pretendard', sans-serif;
+  }
+
+  .pretendard body {
+    font-family: 'Pretendard', sans-serif;
   }
 `;
 

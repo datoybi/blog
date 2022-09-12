@@ -13,10 +13,17 @@ type TemplateProps = {
   children: ReactNode;
 };
 
-const Container = styled.main`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100vh;
+`;
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-top: 60px;
 `;
 
 const Template: FunctionComponent<TemplateProps> = function ({
@@ -48,7 +55,6 @@ const Template: FunctionComponent<TemplateProps> = function ({
           as="font"
           type="font/woff2"
         />
-
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
@@ -80,7 +86,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
 
       <GlobalStyle />
       <Header />
-      {children}
+      <Main>{children}</Main>
       <Footer />
     </Container>
   );

@@ -174,6 +174,12 @@ const MarkdownRenderer = styled.div`
       margin: 50px 0;
       border-top: 1px solid rgba(0, 0, 0, 0.3);
     }
+    table {
+      font-size: 1.1rem;
+    }
+    td {
+      padding-left: 0.4rem;
+    }
   }
 `;
 

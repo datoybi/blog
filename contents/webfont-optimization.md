@@ -90,7 +90,7 @@ WOFF2 형식은 모든 브라우저에서 사용할 수 있고 용량이 가장 
 }
 ```
 
-font-family명은 NanumSquareWeb으로 하나지만 font-weight를 이용하여 사용할 웹 폰트를 다르게 선언하고 있습니다. 이런 경우,
+font-family명은 pretendard 하나지만 font-weight를 이용하여 사용할 웹 폰트를 다르게 선언하고 있습니다. 이런 경우,
 
 - font-weight가 300일 경우에는 Pretendard-Light.woff
 - font-weight가 400일 경우에는 Pretendard-Regular.woff
@@ -148,18 +148,50 @@ CSS의 font-display 속성을 이용하면 웹 폰트의 로딩 상태에 따른
 
 ![FOUT의 단점 레아이웃 깨짐](./images/FOUT-side-effect.png)
 
-위와 같이 FOUT의 단점은 글꼴의 자간, 높이 등 서식이 달라 웹 폰트 적용 전과 후의 레이아웃이 변경될 수 있다고 했습니다. 이것은 [Font Face Observer 라이브러리와](https://d2.naver.com/helloworld/4969726#ch4-2) [Font style matcher](https://sangziii.github.io/fontStyleMatcher) 앱을 사용하면 문제를 해결할 수 있습니다.
+위와 같이 FOUT의 단점은 글꼴의 자간, 높이 등 서식이 달라 웹 폰트 적용 전과 후의 레이아웃이 변경될 수 있다고 했습니다. 이것은 [Font Face Observer](https://fontfaceobserver.com/), [Font style matcher](https://sangziii.github.io/fontStyleMatcher)를 사용하면 문제를 해결할 수 있습니다.
+
+### font face observer
+
+이 모듈을 사용하는 이유는 용량이 매우 적게 들기 때문입니다. 이것은 웹 폰트의 로딩시점을 사용자에게 알려주어 전과 후의 폰트 스타일링을 할 수 있습니다.
+
+```jsx
+import FontFaceObserver from 'fontfaceobserver';
+
+var font = new FontFaceObserver('Pretendard');
+font.load(null, 5000).then(() => {
+  document.documentElement.classList.add('fonts-loaded');
+});
+```
+
+js 파일에 Promise 코드를 작성해줍니다.
+
+```css
+body {
+  font-family: arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -3.95px;
+}
+
+.fonts-loaded body {
+  font-family: 'Pretendard', arial;
+  letter-spacing: -2px;
+}
+```
+
+이렇게 웹 폰트의 로드가 끝나면 fonts-loaded class를 추가해주어 스타일을 바꿀 수 있습니다.
+
+### Font style matcher
 
 fallback 폰트는 각 OS 별로 어떤 폰트를 기본으로 내장하고 있는지를 확인한 뒤, 설정합니다.
 
 참고 : [https://granneman.com/webdev/coding/css/fonts-and-formatting/default-fonts](https://granneman.com/webdev/coding/css/fonts-and-formatting/default-fonts)
 
-Font style matcher에서 fallback 폰트와 사용할 웹 폰트를 설정하면 두 가지 폰트가 같은 위치에 겹쳐서 표시됩니다. 이것을 이용하여 적용 전 후 상태를 체크할 수 있습니다.
+font style matcher는 시스템 폰트와 웹 폰트의 레이아웃을 맞추기 위해 사용합니다.
 
 ![font matcher 사용방법](./images/font-matcher.png)
 
-![font face observer 적용방법](./images/font-face-observer.png)
-두 폰트의 레이아웃을 최대한 맞춰줍니다.
+allback 폰트와 사용할 웹 폰트를 설정하면 두 가지 폰트가 같은 위치에 겹쳐서 표시됩니다. 이것을 이용하여 적용 전 후 상태를 체크할 수 있습니다.
 
 ## 5. **preload 옵션으로 먼저 로딩하기**
 
