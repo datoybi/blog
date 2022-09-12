@@ -37,24 +37,7 @@ const Template: FunctionComponent<TemplateProps> = function ({
     <Container>
       <Helmet>
         <title>{title}</title>
-        <link
-          rel="preload"
-          href="/fonts/Lato-Black.woff2"
-          as="font"
-          type="font/woff2"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Pretendard-Bold.subset.woff2"
-          as="font"
-          type="font/woff2"
-        />
-        <link
-          rel="preload"
-          href="/fonts/Pretendard-Regular.subset.woff2"
-          as="font"
-          type="font/woff2"
-        />
+
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta httpEquiv="Content-Type" content="text/html;charset=UTF-8" />
