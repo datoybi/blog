@@ -53,6 +53,7 @@ const Title = styled.div`
   padding-bottom: 0.1rem;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  font-size: 2rem;
 
   @media (max-width: 768px) {
     font-size: 1.8em;

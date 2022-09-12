@@ -37,6 +37,7 @@ const Wrapper = styled.div`
 const Logo = styled(Link)`
   color: #231900;
   letter-spacing: -2px;
+  font-size: 2rem;
 
   @media (max-width: 768px) {
     margin-left: 20px;
