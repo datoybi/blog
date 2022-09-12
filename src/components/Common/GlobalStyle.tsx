@@ -8,6 +8,7 @@ const defaultStyle = css`
     src: url('/fonts/Lato-Black.woff2') format('woff2');
     src: url('/fonts/Lato-Black.woff') format('woff');
     font-weight: normal;
+    font-display: 'block';
   }
 
   @font-face {
@@ -16,6 +17,7 @@ const defaultStyle = css`
     src: url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
     src: url('/fonts/Pretendard-Regular.subset.woff') format('woff');
     font-weight: normal;
+    font-display: 'block';
   }
 
   @font-face {
@@ -24,6 +26,7 @@ const defaultStyle = css`
     src: url('/fonts/Pretendard-Bold.subset.woff2') format('woff2');
     src: url('/fonts/Pretendard-Bold.subset.woff') format('woff');
     font-weight: bold;
+    font-display: 'block';
   }
 
   ::selection {
