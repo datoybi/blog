@@ -135,11 +135,11 @@ const defaultStyle = css`
   }
   body {
     line-height: 1;
-    font-family: sans-serif, arial;
+    font-family: 'Pretendard', sans-serif;
     color: #231900;
     font-size: 16px;
     word-break: keep-all;
-    /* letter-spacing: -0.3px; */
+    letter-spacing: -0.3px;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
@@ -158,11 +158,11 @@ const defaultStyle = css`
     border-collapse: collapse;
     border-spacing: 0;
   }
-
+  div,
   a {
     text-decoration: none;
   }
-
+  /* 
   header a[class*='Logo'] {
     font-family: Roboto, arial, sans-serif;
     font-size: 2rem;
@@ -192,7 +192,7 @@ const defaultStyle = css`
 
   .pretendard body {
     font-family: 'Pretendard', sans-serif;
-  }
+  } */
 `;
 
 const GlobalStyle: FunctionComponent = function () {

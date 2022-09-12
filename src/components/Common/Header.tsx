@@ -35,6 +35,7 @@ const Wrapper = styled.div`
 `;
 
 const Logo = styled(Link)`
+  font-family: 'Lato', Roboto;
   color: #231900;
   letter-spacing: -2px;
   font-size: 2rem;
