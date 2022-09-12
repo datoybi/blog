@@ -108,7 +108,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-subfont`,
       options: {
-        // fontDisplay: 'block',
+        fontDisplay: 'block',
       },
     },
   ],
