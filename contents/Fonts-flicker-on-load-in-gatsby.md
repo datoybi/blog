@@ -1,5 +1,5 @@
 ---
-date: '2022-09-13'
+date: '2022-09-12'
 title: 'Gatsby로 로딩시, 페이지 이동시 폰트 깜빡임 없애기'
 categories: ['TIL', '최적화']
 summary: '웹 폰트가 적용되기 전에 시스템 폰트를 최대한 웹폰트와 맞춰 깜빡임을 최소화시키고 싶었습니다. 시도한 해결책들과 결과를 기록했습니다.'
@@ -10,9 +10,7 @@ thumbnail: './thumbnail/flicker.jpg'
 
 ![시스템폰트와 웹폰트 레이아웃 차이](./images/FOUT-side-effect.png)
 
-웹 폰트가 적용되기 전에 시스템 폰트를 최대한 웹폰트와 맞춰 깜빡임을 최소화시키고 싶었습니다.
-
-제가 하려는 것은 심플했습니다. 그저 웹 폰트의 로딩이 끝나는 시점을 알고 그 전과 후의 폰트를 스타일링 해주는 것이었습니다.
+웹 폰트가 적용되기 전에 시스템 폰트를 최대한 웹폰트와 맞춰 깜빡임을 최소화시키고 싶었습니다. 제가 하려는 것은 심플했습니다. 그저 웹 폰트의 로딩이 끝나는 시점을 알고 그 전과 후의 폰트를 스타일링 해주는 것이었습니다.
 
 ---
 
@@ -30,9 +28,7 @@ gatsby-omni-font-loader
 
 ## 해결책 2. font face observer 사용하기
 
-[이 글](https://d2.naver.com/helloworld/4969726)에서 해결방안으로 제시했던 방식인 [font face obsever](https://fontfaceobserver.com/)를 사용해보기로 했습니다.
-
-저는 header 폰트와 body 폰트 두가지를 사용하기 때문에 두가지의 폰트를 모두 가져오는지를 체크 한 뒤, 모두 가져온다면 해당 class를 추가했습니다.
+[이 글](https://d2.naver.com/helloworld/4969726)에서 해결방안으로 제시했던 방식인 [font face obsever](https://fontfaceobserver.com/)를 사용해보기로 했습니다. 저는 header 폰트와 body 폰트 두가지를 사용하기 때문에 두가지의 폰트를 모두 가져오는지를 체크 한 뒤, 모두 가져온다면 해당 class를 추가했습니다.
 
 ```jsx
 import FontFaceObserver from 'fontfaceobserver';
@@ -89,7 +85,6 @@ css 파일에는 해당 클래스가 있으면 웹 폰트 레아이웃을, 그�
 ## 해결책 3. 좀 더 빠르게 웹 폰트를 로딩하기
 
 이건 해결책이라기 보다는 대안입니다. 시스템 폰트가 웹 폰트로 바뀌는 과정이 너무 흉하기 때문에 어떻게든 빠르게라도 만들자! 생각했습니다. 물론 느린 인터넷 환경에서는 쓸모없는 대안이겠지요.
-
 또 다시 인터넷을 돌아다니다 [이 글](https://github.com/gatsbyjs/gatsby/issues/19400)을 보게되었습니다. 그리고 몇개의 하트를 받은 해결책을 발견했습니다.
 
 ![폰트 깜빡임의 해결책](./images/font-flicker-solution.png)
