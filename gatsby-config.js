@@ -105,12 +105,6 @@ module.exports = {
         icon: 'src/images/favicon.png',
       },
     },
-    {
-      resolve: `gatsby-plugin-subfont`,
-      options: {
-        fontDisplay: 'block',
-        fallbacks: false,
-      },
-    },
+
   ],
 };

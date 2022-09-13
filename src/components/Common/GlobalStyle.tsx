@@ -2,34 +2,6 @@ import React, { FunctionComponent } from 'react';
 import { Global, css } from '@emotion/react';
 
 const defaultStyle = css`
-  @font-face {
-    font-family: 'Lato';
-    src: local('Lato');
-    src: url('https://fonts.googleapis.com/css2?family=Lato:wght@900&display=block');
-    src: url('/fonts/Lato-Black.woff2') format('woff2');
-    src: url('/fonts/Lato-Black.woff') format('woff');
-    font-weight: normal;
-    font-display: 'block';
-  }
-
-  @font-face {
-    font-family: 'Pretendard';
-    src: local('Pretendard');
-    src: url('/fonts/Pretendard-Regular.subset.woff2') format('woff2');
-    src: url('/fonts/Pretendard-Regular.subset.woff') format('woff');
-    font-weight: normal;
-    font-display: 'block';
-  }
-
-  @font-face {
-    font-family: 'Pretendard';
-    src: local('Pretendard');
-    src: url('/fonts/Pretendard-Bold.subset.woff2') format('woff2');
-    src: url('/fonts/Pretendard-Bold.subset.woff') format('woff');
-    font-weight: bold;
-    font-display: 'block';
-  }
-
   ::selection {
     background-color: rgba(255, 235, 60, 0.3);
   }
@@ -163,37 +135,6 @@ const defaultStyle = css`
   a {
     text-decoration: none;
   }
-  /* 
-  header a[class*='Logo'] {
-    font-family: Roboto, arial, sans-serif;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -3.95px;
-  }
-
-  .lato header a[class*='Logo'] {
-    font-family: 'Lato', arial;
-    font-size: 2rem;
-    letter-spacing: -2px;
-  }
-
-  main div[class*='Title'] {
-    font-family: sans-serif, arial;
-    letter-spacing: -2.5px;
-    font-size: 2em;
-    font-weight: 900;
-  }
-
-  .pretendard main div[class*='Title'] {
-    letter-spacing: -0.3px;
-    font-weight: bold;
-    font-size: 2em;
-    font-family: 'Pretendard', sans-serif;
-  }
-
-  .pretendard body {
-    font-family: 'Pretendard', sans-serif;
-  } */
 `;
 
 const GlobalStyle: FunctionComponent = function () {
