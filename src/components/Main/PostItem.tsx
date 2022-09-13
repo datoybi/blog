@@ -68,24 +68,6 @@ const Date = styled.div`
   opacity: 0.7;
 `;
 
-const Category = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 10px;
-  margin-top: 0.5em;
-  margin-bottom: 0.5em;
-`;
-
-const CategoryItem = styled.div`
-  margin-right: 5px;
-  padding: 3px 5px;
-  border-radius: 3px;
-  background: black;
-  font-size: 14px;
-  font-weight: 700;
-  color: white;
-`;
-
 const Summary = styled.div`
   display: -webkit-box;
   overflow: hidden;
@@ -96,7 +78,7 @@ const Summary = styled.div`
   -webkit-box-orient: vertical;
   font-size: 1em;
   opacity: 0.8;
-  margin-top: 1.5em;
+  margin-top: 1em;
   line-height: 1.4em;
 
   @media (max-width: 768px) {
