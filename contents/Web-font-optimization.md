@@ -3,7 +3,7 @@ date: '2022-09-10'
 title: '웹 폰트(Web Font) 최적화 하는 법'
 categories: ['최적화']
 summary: '웹 폰트를 최적화 하는 방법은 폰트 파일의 용량 줄이기, 서브셋 폰트 사용하기, 같은 폰트라면 font-family로 굵기 설정하기, 텍스트가 항상 보이게 하기, preload 옵션으로 먼저 로딩하기 등이 있습니다.'
-thumbnail: './thumbnail/font.png'
+thumbnail: './thumbnail/font.jpg'
 ---
 
 # 웹 폰트란?
