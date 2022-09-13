@@ -61,7 +61,7 @@ const Header: FunctionComponent = function () {
     <HeaderWrapper>
       <Wrapper>
         <Logo to="/">Som.Blog</Logo>
-        <GithubIcon href="https://github.com/datoybi">
+        <GithubIcon title="github" href="https://github.com/datoybi">
           <FontAwesomeIcon icon={faGithub} />
         </GithubIcon>
       </Wrapper>

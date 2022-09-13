@@ -82,7 +82,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: '<https://my-website.com/>',
+        siteUrl: '<https://www.datoybi.com/>',
         stripQueryString: true,
       },
     },
@@ -97,12 +97,60 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Som.Blog`,
-        short_name: `개발 블로그`,
-        start_url: `/`,
+        short_name: `Som.Blog`,
+        start_url: `./index.html`,
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
         display: `standalone`,
-        icon: 'src/images/favicon.png',
+        icons: [
+          {
+            src: './static/icons/icon-57x57.png',
+            sizes: '57x57',
+            type: 'image/png',
+          },
+          {
+            src: './static/icons/icon-60x60.png',
+            sizes: '60x60',
+            type: 'image/png',
+          },
+          {
+            src: './static/icons/icon-72x72.png',
+            sizes: '72x72',
+            type: 'image/png',
+          },
+          {
+            src: './static/icons/icon-76x76.png',
+            sizes: '76x76',
+            type: 'image/png',
+          },
+          {
+            src: './static/icons/icon-114x114.png',
+            sizes: '114x114',
+            type: 'image/png',
+          },
+          {
+            src: './static/icons/icon-120x120.png',
+            sizes: '120x120',
+            type: 'image/png',
+          },
+          {
+            src: './static/icons/icon-144x144.png',
+            sizes: '144x144',
+            type: 'image/png',
+          },
+          {
+            src: './static/icons/icon-152x152.png',
+            sizes: '152x152',
+            type: 'image/png',
+          },
+          {
+            src: './static/icons/favicon.ico',
+            sizes: '64x64',
+            type: 'image/icon',
+            purpose: 'any maskable',
+          },
+        ],
+        // icon: 'src/images/favicon.png',
       },
     },
     // `gatsby-plugin-subfont`,
