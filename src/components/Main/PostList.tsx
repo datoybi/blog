@@ -29,7 +29,7 @@ type PostListProps = {
   posts: PostListItemType[];
 };
 
-const PostListWrapper = styled.div`
+const PostListWrapper = styled.article`
   display: flex;
   width: 768px;
   margin: 0 auto;

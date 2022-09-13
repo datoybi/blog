@@ -17,7 +17,7 @@ type GatsbyLinkProps = {
   children: ReactNode;
   className?: string;
   to: string;
-} & CategoryItemProps; // &를 통해 Intersection 타입을 정의하여 두 타입을 합쳐줌
+} & CategoryItemProps; 
 
 const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   <Link {...props} />
@@ -62,11 +62,11 @@ const CategoryListWrapper = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   width: 768px;
-  margin: 40px auto 0;
+  margin: 60px auto 0;
 
   @media (max-width: 768px) {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 50px;
   }
 `;
 

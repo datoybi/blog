@@ -14,17 +14,14 @@ const MarkdownRenderer = styled.div`
   word-break: break-all;
   color: #222;
 
-  // Markdown Style
   line-height: 1.8;
   font-size: 1.1rem;
   font-weight: 400;
 
-  // Apply Padding Attribute to All Elements
   p {
     padding: 3px 0;
   }
 
-  // Adjust Heading Element Style
   h1,
   h2,
   h3 {
@@ -56,7 +53,6 @@ const MarkdownRenderer = styled.div`
     font-size: 20px;
   }
 
-  // Adjust Quotation Element Style
   blockquote {
     margin: 30px 0;
     padding: 5px 15px;
@@ -64,21 +60,18 @@ const MarkdownRenderer = styled.div`
     font-weight: 800;
   }
 
-  // Adjust List Element Style
   ol,
   ul {
     margin-left: 20px;
     padding: 10px 0;
   }
 
-  // Adjust Horizontal Rule style
   hr {
     border-top: 1px solid rgba(0, 0, 0, 0.3);
     border-bottom: 0;
     margin: 50px 0;
   }
 
-  // Adjust Link Element Style
   a {
     background-color: rgba(0, 0, 0, 0.07);
     color: #222;
@@ -91,7 +84,6 @@ const MarkdownRenderer = styled.div`
     }
   }
 
-  // Adjust Code Style
   pre[class*='language-'] {
     margin: 30px 0;
     padding: 15px;
@@ -174,11 +166,17 @@ const MarkdownRenderer = styled.div`
       margin: 50px 0;
       border-top: 1px solid rgba(0, 0, 0, 0.3);
     }
+
     table {
       font-size: 1.1rem;
     }
+
     td {
       padding-left: 0.4rem;
+    }
+
+    a {
+      padding: 0.15rem;
     }
   }
 `;

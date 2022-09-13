@@ -151,15 +151,7 @@ module.exports = {
             purpose: 'any maskable',
           },
         ],
-        // icon: 'src/images/favicon.png',
       },
     },
-    // `gatsby-plugin-subfont`,
-    //   resolve: `gatsby-plugin-subfont`,
-    //   options: {
-    //     // fontDisplay: 'block',
-    //     // fallbacks: false,
-    //   },
-    // },
   ],
 };

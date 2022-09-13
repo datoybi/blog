@@ -6,11 +6,14 @@ import { PostFrontmatterType } from 'types/PostItem.types';
 
 type PostItemProps = PostFrontmatterType & { link: string };
 
-const PostItemWrapper = styled(Link)`
-  display: flex;
+const PostItSection = styled.section`
   margin-bottom: 20px;
   flex-direction: row;
   transition: 0.3s box-shadow;
+`;
+
+const PostItemWrapper = styled(Link)`
+  display: flex;
   cursor: pointer;
 
   &:hover {
@@ -96,14 +99,16 @@ const PostItem: FunctionComponent<PostItemProps> = function ({
   link,
 }) {
   return (
-    <PostItemWrapper to={link}>
-      <ThumbnailImage image={gatsbyImageData} alt="Post Item Image" />
-      <PostItemContent>
-        <Title>{title}</Title>
-        <Date>{date}</Date>
-        <Summary>{summary}</Summary>
-      </PostItemContent>
-    </PostItemWrapper>
+    <PostItSection>
+      <PostItemWrapper to={link}>
+        <ThumbnailImage image={gatsbyImageData} alt="Post Item Image" />
+        <PostItemContent>
+          <Title>{title}</Title>
+          <Date>{date}</Date>
+          <Summary>{summary}</Summary>
+        </PostItemContent>
+      </PostItemWrapper>
+    </PostItSection>
   );
 };
 
