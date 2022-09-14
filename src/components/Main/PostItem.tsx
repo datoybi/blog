@@ -7,9 +7,13 @@ import { PostFrontmatterType } from 'types/PostItem.types';
 type PostItemProps = PostFrontmatterType & { link: string };
 
 const PostItSection = styled.section`
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   flex-direction: row;
   transition: 0.3s box-shadow;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+  }
 `;
 
 const PostItemWrapper = styled(Link)`

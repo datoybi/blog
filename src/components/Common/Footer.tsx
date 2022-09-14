@@ -27,7 +27,8 @@ const Footer: FunctionComponent = function () {
     <FooterWrapper>
       © 2022 datoybi.com
       <br />
-      Powered By <Link href="https://www.gatsbyjs.com/">Gatsby</Link>. Hosted By <Link href="https://www.netlify.com/">Netlify</Link>.
+      Powered By <Link href="https://www.gatsbyjs.com/">Gatsby</Link>. Hosted
+      By&nbsp;<Link href="https://www.netlify.com/">Netlify</Link>.
     </FooterWrapper>
   );
 };
