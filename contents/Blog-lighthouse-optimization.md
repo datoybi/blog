@@ -20,7 +20,7 @@ thumbnail: './thumbnail/lighthouse-score.png'
 
 ![웹 폰트가 로드되는 동안 텍스트 계속 표시되는지 확인](./images/20220913-2.png)
 
-위 항목에 대응하기 위해 FOUT 설정 및 웹 폰트 최적화를 진행해보겠습니다. FOUT 및 웹 폰트 최적화를 알고싶다면 [이 게시글](https://www.datoybi.com/Web-font-optimization)을 참조하세요.
+위 항목에 대응하기 위해 FOUT 설정 및 웹 폰트 최적화를 진행해보겠습니다. FOUT 및 웹 폰트 최적화를 알고싶다면 [이 게시글](https://www.datoybi.com/web-font-optimization)을 참조하세요.
 
 최적화 전 코드 입니다.
 
@@ -76,7 +76,7 @@ thumbnail: './thumbnail/lighthouse-score.png'
 - 굵기가 다른 같은 폰트일 경우 font-weight을 설정해주었습니다.
 - 보통의 브라우저 버전을 커버 가능한 WOFF2와 WOFF까지 지원해주기로 결정했습니다.
 
-[관련 trouble shooting 글 보러가기](https://www.datoybi.com/Fonts-flicker-on-load-in-gatsby/)
+[관련 trouble shooting 글 보러가기](https://www.datoybi.com/fonts-flicker-on-load-in-gatsby/)
 
 ---
 
