@@ -106,6 +106,7 @@ const MarkdownRenderer = styled.div`
   li code[class='language-text'],
   h3 code[class='language-text'] {
     // highlight
+    border-radius: 0px;
     background-color: #ffffff;
     color: #231900;
     background-image: linear-gradient(transparent 60%, #f8cd07 40%);
