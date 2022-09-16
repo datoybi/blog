@@ -129,7 +129,7 @@ The power of the Web is in its universality. Access by everyone regardless of di
 
 ---
 
-![http://www.naver.com 바로가기 QR 코드](./images/20220916-7.png)
+![qr코드](./images/20220916-7.png)
 
 ```html
 <a href="http://www.naver.com">
