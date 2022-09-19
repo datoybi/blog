@@ -40,8 +40,8 @@ The power of the Web is in its universality. Access by everyone regardless of di
 
 ```html
 <img alt="" />
-<input type="’image’" alt="" />
-<input type="’button’" alt="" />
+<input type="image" alt="" />
+<input type="button" alt="" />
 <map alt=""> <area alt="" /></map>
 ```
 
@@ -191,8 +191,18 @@ alt="2F7S6N9U"를 제공하기보다는 음성으로 듣기 버튼으로 안내�
 
 display: none, visibility: hidden을 사용하면 스크린리더에서 읽지 않기 때문에 다른방법으로 처리해주어야 합니다.
 
-그래서 어 떤 방 법?!?!?
+그렇다면 어떤 스타일을 주어야 할까요? 아래의 .blind 스타일을 권장합니다.
 
+```css
+.blind {
+	position: absolute; // 레이아웃에 영향을 끼치지 않도록
+	clip: rect(0 0 0 0); 
+	width: 1px; // 스크린 리더가 읽을 수 있도록
+	height: 1px;
+	margin: -1px;
+	overflow: hidden; // 눈에 보이는 부분을 제거
+}
+```
 ---
 
 ### 주의할 점 - 2. alt 속성 무조건 제공
