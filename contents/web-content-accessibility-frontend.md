@@ -1,7 +1,7 @@
 ---
 date: '2022-09-16'
 title: '프론트앤드 관점의 웹 접근성'
-categories: ['TIL']
+categories: ['최적화']
 summary: '웹 접근성이란 무엇이고 웹 접근성을 어떻게 하면 준수 할 수 있는지 그 방법을 공유합니다.'
 thumbnail: './thumbnail/web-accessibility.png'
 ---
@@ -195,14 +195,15 @@ display: none, visibility: hidden을 사용하면 스크린리더에서 읽지 �
 
 ```css
 .blind {
-	position: absolute; // 레이아웃에 영향을 끼치지 않도록
-	clip: rect(0 0 0 0); 
-	width: 1px; // 스크린 리더가 읽을 수 있도록
-	height: 1px;
-	margin: -1px;
-	overflow: hidden; // 눈에 보이는 부분을 제거
+  position: absolute; // 레이아웃에 영향을 끼치지 않도록
+  clip: rect(0 0 0 0);
+  width: 1px; // 스크린 리더가 읽을 수 있도록
+  height: 1px;
+  margin: -1px;
+  overflow: hidden; // 눈에 보이는 부분을 제거
 }
 ```
+
 ---
 
 ### 주의할 점 - 2. alt 속성 무조건 제공
