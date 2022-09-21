@@ -1,7 +1,7 @@
 ---
 date: '2022-09-13'
 title: 'Gatsby 블로그 성능 개선기(Lighthouse)'
-categories: ['TIL', '최적화']
+categories: ['최적화']
 summary: '블로그의 성능을 향상시키려 합니다. 성능 향상의 기준은 Lighthouse의 점수로 측정할 것이고 목표 기준은 95점 이상으로 설정하였습니다.'
 thumbnail: './thumbnail/lighthouse-score.png'
 ---
