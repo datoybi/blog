@@ -38,11 +38,15 @@ The power of the Web is in its universality. Access by everyone regardless of di
 
 아래의 태그들에서 제공해주어야 합니다.
 
-```html
+```
 <img alt="" />
 <input type="image" alt="" />
 <input type="button" alt="" />
 <map alt=""> <area alt="" /></map>
+
+<i class="fa fa-times-circle"></i>
+<span class="blind">Close submenu</span>
+
 ```
 
 ### 작성방법
@@ -153,7 +157,7 @@ QR 코드인 경우 링크를 제공해주어야 합니다.
 	<span>팽이버섯요리 집에서 맥주안주추천 바삭한 팽이버섯튀김 비가 내리고 음악이 흐르면 그렇게 튀김이 생각납니다. 오늘은...</span>
 </a>
 
-<!-- 옳은 예 - a 태그 하나로 묶꼬 alt를 쓰지 말아야 합니다-->
+<!-- 옳은 예 - a 태그 하나로 묶고 alt를 쓰지 말아야 합니다-->
 <a href="">
 	<img src="thumb01.jpg" alt="">
 	<span>팽이버섯요리 집에서 맥주안주추천 바삭한 팽이버섯튀김<span>
@@ -216,7 +220,7 @@ display: none, visibility: hidden을 사용하면 스크린리더에서 읽지 �
 <img src="123456.png" alt="" />
 ```
 
-공백조차 있으면 안됩니다.
+alt 안에는 공백이 없어야 합니다. (공백이 있으면 제목을 읽어주기 때문입니다.)
 
 ---
 
