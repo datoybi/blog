@@ -12,7 +12,7 @@ thumbnail: './thumbnail/font.jpg'
 
 # 기본 사용법
 
-![fontface 작성법](./images/how-to-use-font-face.jpg)
+![fontface 작성법](./images/20220910/how-to-use-font-face.jpg)
 
 - 폰트 이름은 폰트 파일의 이름과 일치하지 않아도 됩니다.
 - format()은 반드시 써야 합니다. 해당 속성을 사용하면 브라우저에서 지원 가능한 파일만 다운로드 받을 수 있습니다. (예를들어, 크롬은 EOT를 지원하지 않는데 format을 명시해두면 알아서 다운 받지 않습니다.)
@@ -36,7 +36,7 @@ thumbnail: './thumbnail/font.jpg'
 
 WOFF 형식과 WOFF2형식은 압축된 폰트 형식입니다. 따라서 용량이 현저히 작은 것을 알 수 있습니다. 그럼 브라우저별 지원하는 폰트 파일을 볼까요?
 
-![브라우저 별로 지원하는 폰트 파일 목록](./images/browser-support-font.png)
+![브라우저 별로 지원하는 폰트 파일 목록](./images/20220910/browser-support-font.png)
 
 보다시피 WOFF와 WOFF2는 거의 모든 브라우저에서 사용할 수 있습니다. 브라우저의 버전에 따라 대응하고 싶은 버전까지 대응하면 됩니다. 즉, Edge의 6.0까지 대응하고 싶다면 EOT 확장자를 font-face에 명시해주면 되겠죠?
 
@@ -63,7 +63,7 @@ WOFF2 형식은 모든 브라우저에서 사용할 수 있고 용량이 가장 
 
 서브셋 폰트(Subset font)란 폰트 파일에서 불필요한 글자들을 제거하고 사용할 글자만 남겨둔 폰트 입니다.
 
-![서브셋 폰트 목록](./images/subset-font.png)
+![서브셋 폰트 목록](./images/20220910/subset-font.png)
 
 노란색으로 표시된 글자는 실생활에서 거의 사용하지 않는 글자들입니다. 이러한 불필요한 글자를 폰트에서 제거하고 사용할 글자만 남겨둔 폰트가 서브셋 폰트입니다. 보통 서브셋 폰트를 사용하면 용량이 pretendard 기준, `814KB → 273KB`까지 감소합니다.
 
@@ -109,7 +109,7 @@ font-family명은 pretendard 하나지만 font-weight를 이용하여 사용할 
 
 브라우저별로 폰트를 렌더링할때 다른 방식을 이용합니다. 기본적으로 웹 폰트가 적용될 때는 텍스트의 번쩍임(flash of text)이 일어납니다. 웹 폰트가 적용 되지 않은 폰트에서 적용할 폰트로 바뀌면서 번쩍임이 일어나느냐(FOUT), 텍스트가 보이지 않는 상태에서 적용된 후 번쩍임이 일어나느냐(FOIT)로 처리방식이 나눠집니다.
 
-![FOIT과 FOUT의 동작 방식](./images/foit-and-fout.gif)
+![FOIT과 FOUT의 동작 방식](./images/20220910/foit-and-fout.gif)
 
 ### FOIT 방식(Flash Of Invisible Text)
 
@@ -152,7 +152,7 @@ CSS의 font-display 속성을 이용하면 웹 폰트의 로딩 상태에 따른
 
 ### FOUT의 단점 해결하기 - **Font Style Matcher로 폰트 간 차이 줄이기**
 
-![FOUT의 단점 레아이웃 깨짐](./images/FOUT-side-effect.png)
+![FOUT의 단점 레아이웃 깨짐](./images/20220910/fout-side-effect.png)
 
 위와 같이 FOUT의 단점은 글꼴의 자간, 높이 등 서식이 달라 웹 폰트 적용 전과 후의 레이아웃이 변경될 수 있다고 했습니다. 이것은 [Font Face Observer](https://fontfaceobserver.com/), [Font style matcher](https://sangziii.github.io/fontStyleMatcher)를 사용하면 문제를 해결할 수 있습니다.
 
@@ -195,7 +195,7 @@ fallback 폰트는 각 OS 별로 어떤 폰트를 기본으로 내장하고 있�
 
 font style matcher는 시스템 폰트와 웹 폰트의 레이아웃을 맞추기 위해 사용합니다.
 
-![font matcher 사용방법](./images/font-matcher.png)
+![font matcher 사용방법](./images/20220910/font-matcher.png)
 
 allback 폰트와 사용할 웹 폰트를 설정하면 두 가지 폰트가 같은 위치에 겹쳐서 표시됩니다. 이것을 이용하여 적용 전 후 상태를 체크할 수 있습니다.
 

@@ -15,7 +15,7 @@ thumbnail: './thumbnail/just-do-it.png'
 저는 [ReactJS로 영어 단어 앱](https://www.youtube.com/playlist?list=PLZKTXPmaJk8J_fHAzPLH8CJ_HO_M33e7-)을 만들어보았고, 프로그래머스에서 [프론트엔드 개발을 위한 자바스크립트](https://school.programmers.co.kr/learn/courses/14723)를 참여하여 상태관리에 대해 익혔으며, [TypeScript는 대충 이렇게 사용하는거구나~](https://www.youtube.com/playlist?list=PLZKTXPmaJk8KhKQ_BILr1JKCJbR0EGlx0)라는걸 음미만 해본 상태입니다. 또한 [gatsby 공식 홈페이지에서 제공하는 튜토리얼](https://www.gatsbyjs.com/docs/tutorial/)도 따라해봤습니다. 그래도 아직 많은 개념들이 헷갈리는 상황이였습니다. 할까 말까 망설이다가 이 말이 생각났습니다.
 
 <p align="center">
-<img src="./images/just-do-it.png" alt="just do it image">
+<img src="./images/20220905/just-do-it.png" alt="just do it image">
 </p>
 
 `네.. 그냥 해보자!` 라는 말입니다. 그래서 그냥 만들게 되었습니다.

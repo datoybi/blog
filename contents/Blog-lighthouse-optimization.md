@@ -10,7 +10,7 @@ thumbnail: './thumbnail/lighthouse-score.png'
 
 크롬에서 F12를 누르고 Lighthouse 탭으로 가서 성능 측정을 해보았습니다.
 
-![성능 측정 전 상황](./images/20220913-1.png)
+![성능 측정 전 상황](./images/20220913/20220913-1.png)
 
 성능 점수는 86%가 나왔습니다. 퀘스트 깨듯 진단된 사항들을 하나씩 해결해 보았습니다.
 
@@ -18,7 +18,7 @@ thumbnail: './thumbnail/lighthouse-score.png'
 
 ## 웹 폰트가 로드되는 동안 텍스트가 계속 표시되는지 확인하기
 
-![웹 폰트가 로드되는 동안 텍스트 계속 표시되는지 확인](./images/20220913-2.png)
+![웹 폰트가 로드되는 동안 텍스트 계속 표시되는지 확인](./images/20220913/20220913-2.png)
 
 위 항목에 대응하기 위해 FOUT 설정 및 웹 폰트 최적화를 진행해보겠습니다. FOUT 및 웹 폰트 최적화를 알고싶다면 [이 게시글](https://www.datoybi.com/web-font-optimization)을 참조하세요.
 
@@ -82,7 +82,7 @@ thumbnail: './thumbnail/lighthouse-score.png'
 
 ## 최대 콘텐츠 렌더링 시간 이미지가 지연 로드되었습니다.
 
-![최대 콘텐츠 렌더링 시간 이미지가 지연 로드](./images/20220913-3.png)
+![최대 콘텐츠 렌더링 시간 이미지가 지연 로드](./images/20220913/20220913-3.png)
 
 찾아보니 이미지가 lazy loading이 되어 쓸데없이 지연이 되니 lazy loading이 필요하지 않는 곳에는 사용하지 말라는 경고 같습니다. 지금은 게시물이 몇개 없지만, 무한 스크롤로 구현을 했기 때문에 lazy loading이 불가피 합니다. 그래서 이미지의 크기를 최적화하여 로드가 빨리 되게 하는 것으로 해결해볼까 합니다.
 
@@ -92,7 +92,7 @@ thumbnail: './thumbnail/lighthouse-score.png'
 
 ## 링크에 인식 가능한 이름이 포함되어 있지 않습니다.
 
-![링크에 인식 가능한 이름이 포함되어 있지 않습니다](./images/20220913-4.png)
+![링크에 인식 가능한 이름이 포함되어 있지 않습니다](./images/20220913/20220913-4.png)
 
 ```jsx
 const GithubIcon = styled.a`
@@ -114,7 +114,7 @@ title 속성을 추가했습니다.
 
 ## 문서에 유효한 rel=canonical 없음
 
-![rel=canonical 없음](./images/20220913-5.png)
+![rel=canonical 없음](./images/20220913/20220913-5.png)
 
 ```jsx
 // gatsby-config.js
@@ -134,7 +134,7 @@ siteUrl을 [https://www.datoybi.com/](https://www.datoybi.com/)로 업데이트 
 
 ## 메니페스트에 마스크 가능한 아이콘이 없음
 
-![메니페스트에 마스크 가능한 아이콘이 없음](./images/20220913-6.png)
+![메니페스트에 마스크 가능한 아이콘이 없음](./images/20220913/20220913-6.png)
 
 ```jsx
 // gatsby-config.js
@@ -204,7 +204,7 @@ options: {
 
 ## 그 결과…
 
-![lighthouse 100점](./images/20220913-7.gif)
+![lighthouse 100점](./images/20220913/20220913-7.gif)
 
 100점을 달성했습니다! 🎉
 
