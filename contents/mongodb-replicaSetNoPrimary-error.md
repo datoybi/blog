@@ -1,6 +1,6 @@
 ---
 date: '2022-10-05'
-title: 'MongoDB MongoServerSelectionError 에러 해결'
+title: 'MongoDB MongoServerSelectionError 에러 해결 방법'
 categories: ['Error Log']
 summary: 'MongoDB MongoServerSelectionError type: ‘ReplicaSetNoPrimary’ 에러 해결 방법을 기록합니다.'
 thumbnail: './thumbnail/error-log.png'
