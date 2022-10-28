@@ -410,6 +410,7 @@ export default modal;
   animation: closeModal 1s ease-out forwards;
 }
 ```
+classNames에 지정한 이름으로 변환 상태를 세팅할 수 있습니다. 위의 예시 코드 경우, `classNames을 fade-modal로 지정`하여 fade-modal-enter, fade-modal-enter-active, fade-modal-exit, fade-modal-exit-active으로 변환 상태를 조작할 수 있습니다.
 
 ---
 
