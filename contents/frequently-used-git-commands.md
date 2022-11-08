@@ -36,6 +36,8 @@ thumbnail: './thumbnail/git-logo.png'
 
   문서를 추가할 때.
 
+[더 많은 이모지는 여기 참고](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)
+
 ### 새 리포 만들었을 때
 
 ```
