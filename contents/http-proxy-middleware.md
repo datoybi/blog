@@ -2,8 +2,8 @@
 date: '2022-11-10'
 title: '[React] 클라이언트에서 CORS 해결하기(http-proxy-middleware)'
 categories: ['react', 'Error Log']
-summary: '네이밍과 클린코드의 규칙에 대해 정리했습니다.'
-thumbnail: './images/20221108/20221108.png'
+summary: 'SOP, CORS에 대해 알아보고 React Client에서 프록시 서버 모듈인 http-proxy-middleware를 이용하여 CORS 에러를 해결했습니다.'
+thumbnail: './images/20221110/thumbnail.png'
 ---
 
 토이 프로젝트를 하고 있던 어느 날, [https://trends.google.co.kr/trends/trendingsearches/daily/rss?geo=KR](https://trends.google.co.kr/trends/trendingsearches/daily/rss?geo=KR)의 자원을 가져오는 axios를 작성하는 와중에 맞닥뜨린 에러입니다.
