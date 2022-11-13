@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Som.Blog`,
+    title: `.log('blog')`,
     description: `의미있는 기록을 위한 개발 블로그 입니다.`,
     author: `Dasom Yun`,
     siteUrl: 'https://datoybi.com',
@@ -96,8 +96,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Som.Blog`,
-        short_name: `Som.Blog`,
+        name: `som.dev.log`,
+        short_name: `som.dev.log`,
         start_url: `./index.html`,
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
