@@ -85,7 +85,7 @@ module.exports = {
         siteUrl: 'https://www.datoybi.com/',
         stripQueryString: true,
       },
-    },
+    }, 
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
