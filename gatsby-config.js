@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `.log('blog')`,
+    title: `Steady-Dev`,
     description: `의미있는 기록을 위한 개발 블로그 입니다.`,
     author: `Dasom Yun`,
     siteUrl: 'https://datoybi.com',
@@ -85,7 +85,7 @@ module.exports = {
         siteUrl: 'https://www.datoybi.com/',
         stripQueryString: true,
       },
-    }, 
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-robots-txt',
@@ -96,8 +96,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `som.dev.log`,
-        short_name: `som.dev.log`,
+        name: `Steady-Dev`,
+        short_name: `Steady-Dev`,
         start_url: `./index.html`,
         background_color: `#FFFFFF`,
         theme_color: `#FFFFFF`,
