@@ -25,6 +25,8 @@ header is present on the requested resource.
 
 ---
 
+# SOP?
+
 자바스크립트 엔진 표준 스펙의 보안 규칙 중, 하나의 출처(Origin)에서 로드된 자원(문서나 스크립트)이 일치하지 않는 자원과 상호작용 하지 못하도록 요청 발생을 제한하는 정책이 있습니다. 그것이 바로 `SOP` (Same Origin Policy, `동일 출처 정책`)입니다.
 
 즉, **http://<hi1>localhost:8000**와 **http://<hi1>localhost:8000/posts**는 같은 출처라서 상호작용이 가능한데, **http://<hi1>google.com**에서 **http://<hi1>localhost:8000**를 호출하면 SOP에 위배됩니다. 그렇다면 동일한 출처의 기준은 무엇일까요?
@@ -60,7 +62,9 @@ Quiz. 이 중, http://<hi1>localhost와 동일 출처인 것은?
 
 ---
 
-## CORS (Cross Origin Resource Sharing, 교차 출처 리소스 공유)
+# CORS
+
+Cross Origin Resource Sharing, 교차 출처 리소스 공유
 
 CORS는 다른 출처의 자원의 공유를 가능하게 만듭니다. 또한, 추가 HTTP 헤더를 사용하여, 한 출처에서 실행 중인 웹 에플리케이션이 다른 출처의 선택한 자원에 접근할 수 있는 권한을 부여하도록 `브라우저`에 알려주는 체제입니다. CORS 에러는 브라우저가 뿜어내는 것입니다. Server↔Server는 CORS 에러가 나지 않습니다.
 
@@ -74,7 +78,7 @@ CORS 에러는 언제 나타날까요? 클라이언트에서 Server(api)에 접�
 
 #
 
-Server에서 해결하는 방법은 CORS 미들웨어를 사용하거나, Server에서 Access-access-control-allow-origin 헤더를 세팅해주면 해결됩니다. 그런데 만약, Server를 수정할 수 없거나 Open API를 사용하는 경우에는 클라이언트에서 처리를 해주어야 합니다. 클라이언트에서 CORS 에러를 해결하는 방법은 `프록시 서버를 이용`하는 것입니다.
+Server에서 해결하는 방법은 CORS 미들웨어를 사용하거나, Server에서 Access-access-control-allow-origin 헤더를 세팅해주면 해결됩니다. 그런데 만약, `Server를 수정할 수 없거나 Open API를 사용하는 경우`에는 클라이언트에서 처리를 해주어야 합니다. 클라이언트에서 CORS 에러를 해결하는 방법은 `프록시 서버를 이용`하는 것입니다.
 
 #
 
@@ -86,13 +90,13 @@ React에서 Proxy Server를 구축하는 방법 은 2가지가 있습니다.
 
 참고 : [공식문서 - 프록시 API 요청](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
 
-저는 공식 문서에서 소개한 방법 중 한가지인 http-proxy-middleware를 사용하겠습니다. 첫번째 방법인 Webpack DevServer Proxy보다 세세하게 세팅이 가능하고, 로컬 환경 이외에도 사용이 가능하기 때문입니다.
+저는 공식 문서에서 소개한 방법 중 한가지인 http-proxy-middleware를 사용하겠습니다. 첫번째 방법인 Webpack DevServer Proxy보다 세세하게 세팅이 가능하기 때문입니다. 그러나 이러한 방법들 모두 `로컬서버 즉, 개발할때만 사용`이 가능합니다. (관련하여 아래에 추가 설명이 있습니다.)
 
 ---
 
 ## React에서 CORS 해결하기 - http-proxy-middleware
 
-먼저, src/App.js에서 api를 호출해보겠습니다. 호출할 api는 [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)입니다.
+먼저, src/App.js에서 api를 호출해보겠습니다. 호출할 open api는 [https://jsonplaceholder.typicode.com/users](https://jsonplaceholder.typicode.com/users)입니다.
 
 ```jsx
 // src/App.js
@@ -119,13 +123,13 @@ api의 endpoint가 뭔지 알고 있어야 합니다.
 
 http-proxy-middleware를 설치합니다.
 
-```jsx
+```
 npm i http-proxy-middleware
 ```
 
 ### setupProxy.js 세팅
 
-src/setupProxy를 생성합니다. 프록시를 세팅할 파일입니다.
+src/setupProxy.js를 생성합니다. 프록시를 세팅할 파일입니다.
 
 ```jsx
 // src/setupProxy.js
@@ -294,6 +298,86 @@ useEffect(() => {
 
 ---
 
+# 추가사항✨
+
+해당 프로젝트를 github pages로 배포하고 신나는 마음으로 새로고침을 했는데 404에러가 뜨더니 proxy server가 먹히지 않았습니다.
+
+![흔들리는 동공](./images/20221110/6.jpg)
+
+조금 찾아보니 `프록시 서버는 개발 환경에서만 사용`할 수 있다고 합니다. 검색 끝에 Netlify에서 proxy server를 세팅할 수 있는 방법을 찾았습니다.
+
+참고자료 : [https://docs.netlify.com/routing/redirects/rewrites-proxies/#proxy-to-another-service](https://docs.netlify.com/routing/redirects/rewrites-proxies/#proxy-to-another-service)
+
+## Netlify proxy server 세팅
+
+### 1. netlify에 빌드 및 배포
+### 2. 최상위 폴더에 netlify.toml라는 파일을 생성
+
+### 3. netlify.toml 세팅
+
+netlify.toml
+
+```
+[[redirects]];
+from = '/trend_proxy/*';
+to = 'https://trends.google.co.kr/:splat';
+status = 200;
+force = true
+
+[[redirects]];
+from = '/news_proxy/*';
+to = 'https://www.bbc.com/korean/:splat';
+status = 200;
+force = true;
+```
+
+리다이렉트를 설정해줍니다. splat은 \*의 의미와 동일합니다.
+
+### 4. API 요청 URL 설정
+
+```jsx
+const trend_proxy =
+  window.location.hostname === 'localhost' ? '' : '/trend_proxy';
+const news_proxy =
+  window.location.hostname === 'localhost' ? '' : '/news_proxy';
+
+const response = await axios.get(`${trend_proxy}${GOOGLE_TRENDS_URL}`);
+const response = await axios.get(`${news_proxy}${TOP_NEWS_URL}`);
+```
+
+로컬에서도 원활하게 사용하기 위해 변수를 추가합니다.
+
+### 참고
+
+setupProxy.js
+
+```jsx
+const { createProxyMiddleware } = require('http-proxy-middleware');
+
+module.exports = function (app) {
+  app.use(
+    createProxyMiddleware('/trends/trendingsearches', {
+      target: 'https://trends.google.co.kr',
+      secure: false,
+      changeOrigin: true,
+    }),
+  );
+
+  app.use(
+    createProxyMiddleware('/mostread.json', {
+      target: 'https://www.bbc.com/korean',
+      changeOrigin: true,
+    }),
+  );
+};
+```
+
+#
+
+이제 로컬에서도 배포환경에서도 프록시 서버를 이용하여 CORS에러 없이 API에 접근할 수 있게 되었습니다!🎉
+
+---
+
 ## reference
 
 [https://xiubindev.tistory.com/115](https://xiubindev.tistory.com/115)
@@ -301,3 +385,5 @@ useEffect(() => {
 [https://www.youtube.com/watch?v=-2TgkKYmJt4](https://www.youtube.com/watch?v=-2TgkKYmJt4)
 
 [https://www.youtube.com/watch?v=hxyp_LkKDdk](https://www.youtube.com/watch?v=hxyp_LkKDdk)
+
+[https://velog.io/@hinyc/배포-Netlify-proxy-설정-9gmuvrr8](https://velog.io/@hinyc/%EB%B0%B0%ED%8F%AC-Netlify-proxy-%EC%84%A4%EC%A0%95-9gmuvrr8)
