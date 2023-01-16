@@ -162,7 +162,7 @@ useEffect(() => {
 }, []);
 ```
 
-App.js에서 url의 endpoint인 **/users**로 api를 호출합니다. proxy를 세팅하면 서버를 재시작 해주어야 합니다.
+App.js에서 url의 endpoint인 **/users**로 api를 호출합니다. proxy를 세팅하면 `서버를 재시작` 해주어야 합니다.
 
 ### 결과화면
 
@@ -311,6 +311,7 @@ useEffect(() => {
 ## Netlify proxy server 세팅
 
 ### 1. netlify에 빌드 및 배포
+
 ### 2. 최상위 폴더에 netlify.toml라는 파일을 생성
 
 ### 3. netlify.toml 세팅
@@ -318,17 +319,17 @@ useEffect(() => {
 netlify.toml
 
 ```
-[[redirects]];
-from = '/trend_proxy/*';
-to = 'https://trends.google.co.kr/:splat';
-status = 200;
+[[redirects]]
+from = '/trend_proxy/*'
+to = 'https://trends.google.co.kr/:splat'
+status = 200
 force = true
 
-[[redirects]];
-from = '/news_proxy/*';
-to = 'https://www.bbc.com/korean/:splat';
-status = 200;
-force = true;
+[[redirects]]
+from = '/news_proxy/*'
+to = 'https://www.bbc.com/korean/:splat'
+status = 200
+force = true
 ```
 
 리다이렉트를 설정해줍니다. splat은 \*의 의미와 동일합니다.
