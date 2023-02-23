@@ -3,7 +3,7 @@ date: '2023-02-22'
 title: 'React Error Boundary를 사용하여 에러 핸들링하기(react-query)'
 categories: ['최적화']
 summary: '블로그의 성능을 향상시키려 합니다. 성능 향상의 기준은 Lighthouse의 점수로 측정할 것이고 목표 기준은 95점 이상으로 설정하였습니다.'
-thumbnail: './thumbnail/error-handling.png'
+thumbnail: './thumbnail/error-handling.jpg'
 ---
 
 이번에 팀 프로젝트를 하다가 사용성에 대해 고민해보니 에러 핸들링의 필요성을 느끼게되었습니다. 에러를 언제, 왜 그리고 어떻게 보여줘야 할지와 실질적으로 어떻게 구현할지 스터디한 내용들을 공유합니다.
