@@ -1,17 +1,31 @@
-# datoybi/blog
+# Frontend dev blog
 
+My personal dev blog.
 <br/>
-<p align="center">
-	<a href="http://www.datoybi.com/"><img src="./static/logo.png"></a><br/>
-</p>
+<br/>
 
-## 🌍 Tools
+# 🤳 Demo
 
-- Bulit using <b>Gatsby.js</b> 🎉
-- Styled using: <b>Emotion</b> 🎨
-- SQL using: <b>GraphQL</b> ✔️
-- Deployed on <b>netlify</b> 🚀
-- Comment using <b>utterances</b> 🗒️
-- Code syntax using <b>Prism.js</b> 🕶️
+<img src="./src/images/demo.gif" width="100%"/>
+<br/>
+<br/>
 
-<a href="http://www.datoybi.com/">블로그 구경가기</a>
+# 🛠 Skills
+
+<img src="./src/images/tools.png" width="100%"/>
+<br/>
+<br/>
+
+# ✨Features to be added in the future
+
+- Add Dark Mode
+- Improvement search engine
+- Add search bar
+- Add Like button
+
+  <br/>
+  <br/>
+
+# 🚩Visit blog
+
+<a href="http://www.datoybi.com/">http://www.datoybi.com/</a>
