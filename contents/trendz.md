@@ -7,7 +7,7 @@ thumbnail: './thumbnail/trendz.png'
 ---
 
 ![background trendz](./images/20230402/bg_trendz.gif)
-[🚩trendz 보러가기](https://helpful-lokum-0bdb3e.netlify.app/)
+[🚩trendz 보러가기](https://trendmz.netlify.app/)
 
 trendz는 제가 취업 포트폴리오용 프로젝트 뿐만 아니라, 정말 만들어보고 싶었던 아이디어 중 하나였습니다. 잘 만들었다고 말하기엔 아직 무리가 있지만 추후에 로그인 기능과 다른 크롤링들도 추가해서 고도화를 진행해 나가고 싶습니다. 아래는 제가 trendz를 개발하며 느꼈던 느낀점을 짧게 기록한 내용입니다.
 
