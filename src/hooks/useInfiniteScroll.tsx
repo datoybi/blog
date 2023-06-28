@@ -17,6 +17,7 @@ const useInfiniteScroll = function (
   const observer: MutableRefObject<IntersectionObserver | null> =
     useRef<IntersectionObserver>(null);
   const [count, setCount] = useState<number>(1);
+
   const postListByCategory = useMemo<PostListItemType[]>(
     () =>
       posts.filter(
