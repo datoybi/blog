@@ -1,8 +1,8 @@
 ---
 date: '2023-05-10'
-title: 'Callback & Promise 톺아보기'
+title: 'Callback & Promise & async/await 톺아보기'
 categories: ['JS']
-summary: '콜백과 프로미스에 대해 스터디한 것을 기록합니다.'
+summary: '콜백과 프로미스, async/await에 대해 스터디한 것을 기록합니다.'
 thumbnail: './thumbnail/TIL.png'
 ---
 
@@ -366,11 +366,128 @@ Promise.resolve()
 
 콜백함수는 마이크로태스크 큐에 저장되는데 마이크로태스크 큐는 태스트 큐보다 우선순위가 높기에 Promise먼저 실행됩니다.
 
+그러다 Promise보다 간단하고 가독성 좋게 비동기 처리를 동기처럼 동작하도록 구현할 수 있는 async/await이 도입되었습니다.
+
 ---
+
+# async/await
+
+- async/await는 프로미스를 기반으로 동작합니다.
+- 프로미스의 then/catch/finally 후속 처리 메서드에 콜백 함수를 전달해서 비동기 처리 결과를 후속 처리 할 필요 없이 마치 동기 처리처럼 프로미스를 사용할 수 있습니다.
+
+## async
+
+- await 키워드는 반드시 async 함수 내부에서 사용해야 합니다.
+- async 함수는 언제나 프로미스를 반환합니다. (명시적으로 프로미스를 반환하지 않더라도 반환값을 resolve하는 프로미스를 반환합니다.)
+
+```jsx
+// async 함수 선언문
+async function foo(n) {
+  return n;
+}
+foo(1).then(v => console.log(v));
+
+// async 함수 표현식
+const bar = async function (n) {
+  return n;
+};
+bar(2).then(v => console.log(v));
+
+// async 화살표 함수
+const baz = async n => n;
+baz(3).then(v => console.log(v));
+
+// async 메서드
+const obj = {
+  async foo(n) {
+    return n;
+  },
+};
+obj.foo(4).then(v => console.log(v));
+
+// async 클래스 메서드
+class MyClass {
+  async bar(n) {
+    return n;
+  }
+}
+
+const myClass = new MyClass();
+myClass.bar(5).then(v => console.log(v));
+```
+
+## await
+
+- 비동기 처리가 수행될 때까지 대기하다가 settled 상태가 되면 프로미스가 resolve한 처리 결과를 반환합니다.
+- 반드시 프로미스 앞에서 사용해야 합니다.
+
+```jsx
+const get = async () => {
+  const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  const data = await response.json();
+  console.log(data);
+};
+
+get();
+```
+
+## 주의할 점
+
+모든 프로미스에 await 키워드를 사용하는 것은 주의해야합니다.
+
+```jsx
+async function foo() {
+  const a = await new Promise(resolve => setTimeout(() => resolve(1)), 3000);
+  const b = await new Promise(resolve => setTimeout(() => resolve(2)), 2000);
+  const c = await new Promise(resolve => setTimeout(() => resolve(3)), 1000);
+
+  console.log([a, b, c]);
+}
+
+foo(); // 약 6초 소요
+
+async function foo() {
+  const response = await Promise.all([
+    new Promise(resolve => setTimeout(() => resolve(1)), 3000),
+    new Promise(resolve => setTimeout(() => resolve(2)), 2000),
+    new Promise(resolve => setTimeout(() => resolve(3)), 1000),
+  ]);
+
+  console.log(response);
+}
+
+foo(); // 약 3초 소요
+```
+
+## 에러 처리
+
+- async/await에서는 try-catch문을 사용할 수 있습니다.
+
+```jsx
+const get = async () => {
+  try {
+    const response = await fetch(
+      'https://jsonplaceholder.typicode.com/todos/1',
+    );
+    const data = await response.json();
+    console.log(data);
+  } catch (e) {
+    console.error(e);
+  }
+};
+
+get();
+```
+
+then()과 catch()도 사용이 가능합니다.
+
+---
+
+# 느낀점
 
 이렇게 Callback과 Promise에 대해 정리해보았습니다.
 
-You don’t know JS를 읽는 도중 이런 글을 발견했습니다. 어떤 코드가 깨진 이유를 알려 하지 않는 것보다 코드가 잘 작동한 이유를 그냥 모르고 지나치는 태도가 더 나쁘다. 이른바 종이상자(House of cards)정신이라고 하는데, “잘 돌아가니까 이유는 모르지만 어쨌거나 잘 돌아가니 됐어. 건드리지말자!” 라는 태도를 경계하라고 합니다.
+You don’t know JS를 읽는 도중 이런 글을 발견했습니다. 어떤 코드가 깨진 이유를 알려 하지 않는 것보다 `코드가 잘 작동한 이유를 그냥 모르고 지나치는 태도가 더 나쁘다.` 이른바 종이상자(House of cards)정신이라고 하는데, “잘 돌아가니까 이유는 모르지만 어쨌거나 잘 돌아가니 됐어. 건드리지말자!” 라는 태도를 경계하라고 합니다.
 
 내 코드를 정확히 이해하고 절대 대충 이해하고 넘어가지 말아야 겠다는 생각을 다시금 하게 되었습니다.
 
