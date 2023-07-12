@@ -25,7 +25,7 @@ const Link = styled.a`
 const Footer: FunctionComponent = function () {
   return (
     <FooterWrapper>
-      © 2022 datoybi.com
+      © 2023 datoybi.com
       <br />
       Powered By <Link href="https://www.gatsbyjs.com/">Gatsby</Link>. Hosted
       By&nbsp;<Link href="https://www.netlify.com/">Netlify</Link>.
