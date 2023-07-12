@@ -3,7 +3,7 @@ date: '2023-05-13'
 title: 'Javascript 비동기 핸들링'
 categories: ['JS']
 summary: ' Javascript에서 비동기 처리가 왜 필요한지부터 비동기 처리를 하기 위해 개발자들이 어떤 노력을 해왔는지 정리합니다. '
-thumbnail: './thumbnail/TIL.png'
+thumbnail: './thumbnail/asynchronous.png'
 ---
 
 ## 동기? 비동기?
@@ -135,7 +135,7 @@ undefined
 
 이러한 문제점을 해결하기 위해 콜백 함수를 사용하게 되었습니다. 그렇다면 콜백 함수는 무엇이고 어떻게 이 문제점을 해결해주는지 알아봅시다.
 
-[Callback함수와 Promise, async/await에 대해 정리한 게시글 보러가기](https://www.datoybi.com/callback-promise/)
+[Callback함수와 Promise, async/await에 대해 정리한 게시글 보러가기](https://www.datoybi.com/callback-promise-async-await/)
 
 ---
 
@@ -265,7 +265,7 @@ await 키워드는 반드시 프로미스 앞에 사용해야 하며 비동기 �
 
 ## 정리
 
-스터디에서 발표한 내용을 토대로 Javascript에서 비동기 처리가 왜 필요한지부터 비동기 처리를 하기 위해 개발자들이 어떤 노력을 해왔고 어떤 함수를 사용했는지 알아보았습니다.
+스터디에서 발표한 내용을 토대로 Javascript에서 비동기 처리가 왜 필요한지부터 비동기 처리를 하기 위해 개발자들이 어떤 노력을 해왔고 어떻게 함수를 수정해가며 지금의 모습까지 오게 되었는지 살펴보았습니다. 이러한 큰 흐름으로 비동기를 이해하니 한층 더 가까워 진 것 같습니다.
 
 ---
 

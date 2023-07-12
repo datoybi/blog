@@ -3,7 +3,7 @@ date: '2023-05-10'
 title: 'Callback & Promise & async/await 톺아보기'
 categories: ['JS']
 summary: '콜백과 프로미스, async/await에 대해 스터디한 것을 기록합니다.'
-thumbnail: './thumbnail/TIL.png'
+thumbnail: './thumbnail/callback.png'
 ---
 
 # 콜백 함수(Callback Function)
