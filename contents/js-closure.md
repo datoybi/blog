@@ -1,7 +1,7 @@
 ---
 date: '2023-06-19'
 title: 'Javascript 클로저(Closure)'
-categories: ['TIL']
+categories: ['JS']
 summary: 'Javascript 클로저에 대해 스터디한 내용을 기록합니다.'
 thumbnail: './thumbnail/js-closure.png'
 ---
