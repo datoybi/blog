@@ -1,8 +1,8 @@
 ---
 date: '2023-07-05'
-title: 'React State Update와 Rendering'
+title: 'React State 특징 & 동작원리'
 categories: ['React']
-summary: '리엑트 공식문서를 스터디하고 State Update와 Rendering 관련 사항을 기록합니다.'
+summary: '리엑트 공식문서를 스터디하고 State관련 사항을 기록합니다.'
 thumbnail: './thumbnail/react-state.png'
 ---
 
