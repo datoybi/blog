@@ -3,7 +3,7 @@ date: '2023-08-08'
 title: '[React] API를 연동하여 custom pagination 구현하기'
 categories: ['React']
 summary: 'api를 연동하여 페이지네이션을 직접 구현합니다.'
-thumbnail: './thumbnail/react-state.png'
+thumbnail: './thumbnail/pagination.png'
 ---
 
 ![페이지네이션 완성본](./images/20230808/7.gif)
