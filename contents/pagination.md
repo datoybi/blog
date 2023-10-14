@@ -494,3 +494,8 @@ const Button = styled.button<{ $active: boolean }>`
 https://github.com/datoybi/react-playground/tree/main/src/components/pagination/refactor
 
 피드백 환영합니다. 긴글 읽어주셔서 감사합니다. 👍
+
+---
+
+섬네일 출처 : https://www.figma.com/community/file/895366295863790914/pagination-component
+Reference : https://www.daleseo.com/react-pagination/
