@@ -1,9 +1,9 @@
 ---
 date: '2023-11-11'
-title: 'ReactJS 라이브러리란'
+title: 'ReactJS 라이브러리'
 categories: ['React']
 summary: 'ReactJS가 왜 생겨났는지부터 특징과 앞으로의 방향성까지 제 나름대로 정리해보았습니다.'
-thumbnail: './thumbnail/react.jpg'
+thumbnail: './thumbnail/react-logo.png'
 ---
 
 # 왜 facebook은 ReactJS를 만들었을까?
