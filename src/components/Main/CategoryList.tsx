@@ -17,7 +17,7 @@ type GatsbyLinkProps = {
   children: ReactNode;
   className?: string;
   to: string;
-} & CategoryItemProps; 
+} & CategoryItemProps;
 
 const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   <Link {...props} />
@@ -26,10 +26,9 @@ const CategoryItem = styled(({ active, ...props }: GatsbyLinkProps) => (
   padding: 5px 0;
   font-size: 18px;
   cursor: pointer;
-  color: #231900;
   background-image: linear-gradient(
     transparent calc(100% - 1.8px),
-    black 1.8px
+    var(--primary) 1.8px
   );
   background-repeat: no-repeat;
   -webkit-background-size: 0% 100%;

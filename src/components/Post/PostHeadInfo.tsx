@@ -27,7 +27,7 @@ const Title = styled.span`
   word-break: break-all;
   font-size: 45px;
   line-height: 1.2;
-  background-image: linear-gradient(transparent 60%, #f8cd07 40%);
+  background-image: linear-gradient(transparent 60%, var(--highlight) 40%);
   background-repeat: no-repeat;
   background-size: 100% 100%;
 
@@ -40,7 +40,7 @@ const DateWrapper = styled.div`
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 1em;
-  color: rgba(0, 0, 0, 0.7);
+  color: var(--text);
 
   @media (max-width: 768px) {
     margin-bottom: 1em;
@@ -52,7 +52,7 @@ const CategoryWrapper = styled.div`
   display: flex;
   margin-top: 1.5em;
   padding-bottom: 30px;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--text);
 
   @media (max-width: 768px) {
     margin-top: 1.5em;
@@ -60,8 +60,8 @@ const CategoryWrapper = styled.div`
 `;
 
 const Category = styled.p`
-  color: #000;
-  background: rgba(0, 0, 0, 0.07);
+  color: var(--text);
+  background: var(--category-bg);
   padding: 0.3em;
   border-radius: 8px;
   margin-right: 10px;

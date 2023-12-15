@@ -12,7 +12,7 @@ const MarkdownRenderer = styled.div`
   margin: 0 auto;
   padding: 50px 0;
   word-break: break-all;
-  color: #222;
+  color: var(--text);
 
   line-height: 1.8;
   font-size: 1.1rem;
@@ -56,7 +56,7 @@ const MarkdownRenderer = styled.div`
   blockquote {
     margin: 30px 0;
     padding: 5px 15px;
-    border-left: 2px solid #000000;
+    border-left: 2px solid var(--text);
     font-weight: 800;
   }
 
@@ -67,14 +67,14 @@ const MarkdownRenderer = styled.div`
   }
 
   hr {
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid var(--text);
     border-bottom: 0;
     margin: 50px 0;
   }
 
   a {
-    background-color: rgba(0, 0, 0, 0.07);
-    color: #222;
+    background-color: var(--category-bg)
+    color: var(--text);
     font-weight: 100;
     padding: 0.25rem;
     border-radius: 0.25rem;
@@ -106,9 +106,10 @@ const MarkdownRenderer = styled.div`
   h3 code[class='language-text'] {
     // highlight
     border-radius: 0px;
-    background-color: #ffffff;
-    color: #231900;
-    background-image: linear-gradient(transparent 60%, #f8cd07 40%);
+    /* background-color: #fff; */
+    background-color: var(--background);
+    color: var(--text);
+    background-image: linear-gradient(transparent 60%, var(--highlight) 40%);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     animation: 0.5s linear highlight-animation;
@@ -178,8 +179,8 @@ const MarkdownRenderer = styled.div`
     a {
       padding: 0.15rem;
     }
-  }
-`;
+	}
+	`;
 
 const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
   return <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />;

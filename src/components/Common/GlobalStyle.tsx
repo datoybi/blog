@@ -109,7 +109,8 @@ const defaultStyle = css`
   body {
     line-height: 1;
     font-family: 'Pretendard', sans-serif;
-    color: #231900;
+    color: var(--text);
+    background-color: var(--background-color);
     font-size: 16px;
     word-break: keep-all;
     letter-spacing: -0.3px;
@@ -134,6 +135,27 @@ const defaultStyle = css`
   div,
   a {
     text-decoration: none;
+    color: var(--text);
+  }
+
+  body {
+    & {
+      --highlight: #f8cd07;
+      --text: #231900;
+      --background-color: #fff;
+      --header-bg: rgba(255, 255, 255, 0.7);
+      --box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      --category-bg: rgba(0, 0, 0, 0.07);
+    }
+
+    &.dark {
+      --highlight: #837220;
+      --text: #fff;
+      --background-color: hsl(230, 25%, 18%);
+      --header-bg: hsla(230, 20%, 0%, 20%);
+      --box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+      --category-bg: rgba(255, 255, 255, 0.07);
+    }
   }
 `;
 

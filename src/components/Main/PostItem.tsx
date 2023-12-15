@@ -21,11 +21,10 @@ const PostItemWrapper = styled(Link)`
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
   }
 
   @media (max-width: 768px) {
-    // box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     margin: 0 10px 20px 10px;
   }
 `;
@@ -47,7 +46,6 @@ const PostItemContent = styled.div`
   overflow: hidden;
   overflow-wrap: break-word;
   padding: 15px;
-  color: #231900;
 `;
 
 const Title = styled.div`

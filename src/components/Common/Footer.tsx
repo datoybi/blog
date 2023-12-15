@@ -10,14 +10,14 @@ const FooterWrapper = styled.footer`
   font-size: 15px;
   text-align: center;
   line-height: 2;
-  background-color: #f8cd07;
+  background-color: var(--highlight);
   @media (max-width: 768px) {
     font-size: 13px;
   }
 `;
 
 const Link = styled.a`
-  color: #222;
+  color: var(--text);
   text-decoration: underline;
   font-weight: 500;
 `;
