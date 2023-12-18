@@ -21,6 +21,6 @@
     // "types": ["@emotion/react/types/css-prop", "@emotion/styled"],
     "noImplicitAny": true
   },
-  "include": ["src/**/*.tsx"],
+  "include": ["src/**/*.tsx", "src/**/*.ts"],
   "exclude": ["node_modules"] /* Skip type checking all .d.ts files. */
 }

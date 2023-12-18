@@ -1,6 +1,5 @@
 import React, { createRef, FunctionComponent, useEffect } from 'react';
 import styled from '@emotion/styled';
-
 const src = 'https://utteranc.es/client.js';
 const repo = 'datoybi/blog';
 
@@ -34,7 +33,7 @@ const CommentWidget: FunctionComponent = function () {
       repo,
       'issue-term': 'pathname',
       label: 'Comment',
-      theme: 'github-light',
+      theme: 'github-dark',
       crossorigin: 'anonymous',
       async: 'true',
     };

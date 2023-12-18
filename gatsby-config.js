@@ -87,6 +87,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-dark-mode',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
