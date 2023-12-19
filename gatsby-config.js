@@ -88,6 +88,7 @@ module.exports = {
     },
     'gatsby-plugin-sitemap',
     'gatsby-plugin-dark-mode',
+    'gatsby-plugin-netlify',
     {
       resolve: 'gatsby-plugin-robots-txt',
       options: {
