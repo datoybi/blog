@@ -7,6 +7,11 @@
 	"engines": {
     "node": "10.x"
   },
+	"overrides": {
+		"lmdb": "2.6.0-alpha6",
+		"@lmdb/lmdb-darwin-arm64": "2.6.0-alpha6",
+		"@lmdb/lmdb-darwin-x64": "2.6.0-alpha6"
+	},
   "dependencies": {
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
