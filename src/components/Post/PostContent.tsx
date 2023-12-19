@@ -73,7 +73,7 @@ const MarkdownRenderer = styled.div`
   }
 
   a {
-    background-color: var(--category-bg)
+    background-color: var(--category-bg);
     color: var(--text);
     font-weight: 100;
     padding: 0.25rem;
@@ -179,8 +179,8 @@ const MarkdownRenderer = styled.div`
     a {
       padding: 0.15rem;
     }
-	}
-	`;
+  }
+`;
 
 const PostContent: FunctionComponent<PostContentProps> = function ({ html }) {
   return <MarkdownRenderer dangerouslySetInnerHTML={{ __html: html }} />;

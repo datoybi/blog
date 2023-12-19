@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 
 interface Props {
@@ -8,10 +9,14 @@ interface Props {
 const ThemeButton = () => {
   const toggleTheme = () => {};
 
+  useEffect(() => {
+    toggleTheme();
+  }, []);
+
   return (
     <ThemeToggler type="checkbox" onChange={toggleTheme}>
       {({ theme, toggleTheme }: Props) => {
-        // console.log(theme);
+        console.log(theme);
         return (
           <input
             type="checkbox"

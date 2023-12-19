@@ -154,7 +154,7 @@ const defaultStyle = css`
       --background-color: hsl(230, 25%, 18%);
       --header-bg: hsla(230, 20%, 0%, 20%);
       --box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-      --category-bg: rgba(255, 255, 255, 0.07);
+      --category-bg: rgba(255, 255, 255, 0.099);
     }
   }
   .darkmode {
