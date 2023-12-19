@@ -16,7 +16,7 @@ const ThemeButton = () => {
   return (
     <ThemeToggler type="checkbox" onChange={toggleTheme}>
       {({ theme, toggleTheme }: Props) => {
-        console.log(theme);
+        // console.log(theme);
         return (
           <input
             type="checkbox"
