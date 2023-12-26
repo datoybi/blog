@@ -108,7 +108,7 @@ const defaultStyle = css`
   }
   body {
     line-height: 1;
-    font-family: SD Move It, 'Pretendard', sans-serif;
+    font-family: Sandoll Studywithme, 'Pretendard', sans-serif;
     color: var(--text);
     background-color: var(--background-color);
     font-size: 16px;

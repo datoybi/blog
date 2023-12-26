@@ -115,7 +115,7 @@ const MarkdownRenderer = styled.div`
     animation: 0.5s linear highlight-animation;
     animation-iteration-count: 1;
     animation-fill-mode: both;
-    font-family: 'SD Move It', 'Pretendard', sans-serif;
+    font-family: Sandoll Studywithme, 'Pretendard', sans-serif;
     /* 
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui,
       Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
