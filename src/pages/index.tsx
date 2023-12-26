@@ -1,3 +1,4 @@
+import { Script } from 'gatsby';
 import React, { FunctionComponent, useMemo } from 'react';
 import CategoryList, { CategoryListProps } from 'components/Main/CategoryList';
 import PostList, { PostType } from 'components/Main/PostList';
@@ -5,7 +6,6 @@ import { graphql } from 'gatsby';
 import { PostListItemType } from 'types/PostItem.types';
 import queryString, { ParsedQuery } from 'query-string';
 import Template from 'components/Common/Template';
-import { ThemeContext } from '@emotion/react';
 
 type IndexPageProps = {
   location: {
@@ -70,7 +70,11 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   );
 
   return (
-    <ThemeContext.Provider value={{}}>
+    <>
+      <Script
+        type="module"
+        src="https://8fl3k30sy0.execute-api.ap-northeast-2.amazonaws.com/v1/api/fontstream/djs/?sid=gAAAAABliAOADeWV0PrGqaBoiWGC1L2msW0z8spmoTPgXhMAxBAYWEutwN165ckzw2i-el1Twzl999Dr-wynWbihZFhFCNTMo74FoYB69NAlebRhYhPxEx_CpVCvyJSMTRrkh_4a3_AgWyO6PP47XmBSCK1baRFa_rkbWxk4qK3gBCbAOUD35AIR5dFTkTIstTYegegAFoj9t_0LNa9PUt2fw7vn4KNW3czLHG7vUKAVdbfUiPBemM-ES41FQUtN30hRC5OXdpgg"
+      />
       <Template
         title={title}
         description={description}
@@ -83,7 +87,7 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
         />
         <PostList selectedCategory={selectedCategory} posts={edges} />
       </Template>
-    </ThemeContext.Provider>
+    </>
   );
 };
 
