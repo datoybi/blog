@@ -263,7 +263,9 @@ React 컴포넌트를 생성할 때에도 동일할 작업을 수행합니다. *
      return String(metric);
    }
 
-   formatMetric(100, true, true); // 각각의 true들이 뭘 의미하는지 모름, 값은 isPercent와 isCurreny 둘다 true가 될 수 없음(불가능한 상태)
+   formatMetric(100, true, true);
+   // 각각의 true 매개변수들이 뭘 의미하는지 모름
+   // 값은 isPercent와 isCurrency 둘다 true가 될 수 없음 (불가능한 상태)
 
    // ⭕️
    type MetricVariant = 'standard' | 'percent' | 'currency';
