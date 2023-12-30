@@ -8,11 +8,13 @@ thumbnail: './thumbnail/boolean-parameter.jpg'
 
 이 포스팅은 [클린 코드](https://github.com/qkraudghgh/clean-code-javascript-ko)에 대해 읽다가 boolean flag paramter를 사용하지 말라는 이유에 대해 궁금해져 구글링하던 찰나, 관련된 좋은 글을 발견하여 번역한 게시글입니다.
 
-[tkdodo의 No love for boolean parameters](https://tkdodo.eu/blog/no-love-for-boolean-parameters)를 번역하였습니다.
+원문은 [tkdodo의 No love for boolean parameters](https://tkdodo.eu/blog/no-love-for-boolean-parameters)입니다.
 
 ---
 
 # boolean parameter를 너무 사랑하지마세요.
+
+<br/>
 
 boolean은 0, 1 이거나 true, false로 항상 두 값중 하나입니다. 너무나 간단하고 예측이 가능하지요. 결국 우리가 작성하는 모든 코드는 수많은 0과 1로 끝납니다.
 
