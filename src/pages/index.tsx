@@ -70,25 +70,18 @@ const IndexPage: FunctionComponent<IndexPageProps> = function ({
   );
 
   return (
-    <>
-      <Script
-        type="module"
-        src="https://8fl3k30sy0.execute-api.ap-northeast-2.amazonaws.com/v1/api/fontstream/djs/?sid=gAAAAABliAOADeWV0PrGqaBoiWGC1L2msW0z8spmoTPgXhMAxBAYWEutwN165ckzw2i-el1Twzl999Dr-wynWbihZFhFCNTMo74FoYB69NAlebRhYhPxEx_CpVCvyJSMTRrkh_4a3_AgWyO6PP47XmBSCK1baRFa_rkbWxk4qK3gBCbAOUD35AIR5dFTkTIstTYegegAFoj9t_0LNa9PUt2fw7vn4KNW3czLHG7vUKAVdbfUiPBemM-ES41FQUtN30hRC5OXdpgg"
-        charSet="utf-8"
+    <Template
+      title={title}
+      description={description}
+      url={siteUrl}
+      image={publicURL}
+    >
+      <CategoryList
+        selectedCategory={selectedCategory}
+        categoryList={categoryList}
       />
-      <Template
-        title={title}
-        description={description}
-        url={siteUrl}
-        image={publicURL}
-      >
-        <CategoryList
-          selectedCategory={selectedCategory}
-          categoryList={categoryList}
-        />
-        <PostList selectedCategory={selectedCategory} posts={edges} />
-      </Template>
-    </>
+      <PostList selectedCategory={selectedCategory} posts={edges} />
+    </Template>
   );
 };
 
